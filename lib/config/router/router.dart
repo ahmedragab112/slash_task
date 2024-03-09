@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:slash_task/core/api/dio_singlton.dart';
+import 'package:slash_task/core/api/web_service.dart';
 import 'package:slash_task/core/utils/constant/app_constant.dart';
 import 'package:slash_task/config/router/routes.dart';
-import 'package:slash_task/feature/deatils/product_details.dart';
-import 'package:slash_task/feature/home/home.dart';
+import 'package:slash_task/feature/features/deatils/presentation/pages/product_details.dart';
+import 'package:slash_task/feature/features/home/data/datasources/home_remotedata_soucre.dart';
+import 'package:slash_task/feature/features/home/data/repositories/home_repo_implementation.dart';
+import 'package:slash_task/feature/features/home/domain/usecases/home_usecase.dart';
+import 'package:slash_task/feature/features/home/presentation/manager/home_cubit.dart';
+import 'package:slash_task/feature/features/home/presentation/pages/home.dart';
 
 class AppRouter {
   static Route<Widget>? onGenerateRoute(RouteSettings settings) {
@@ -10,7 +17,17 @@ class AppRouter {
       case AppRoutes.homeProducts:
         return PageRouteBuilder(
           settings: settings,
-          pageBuilder: (_, animation, __) => const Home(),
+          pageBuilder: (_, animation, __) => BlocProvider(
+            create: (context) => HomeCubit(
+                useCase: HomeUseCase(
+                    homeRepo: HomeRepoImplementation(
+                        dataSource: HomeRemoteDataSourceImplementation(
+              apiManager: ApiManager(
+                DioFactory.getDio(),
+              ),
+            )))),
+            child: const Home(),
+          ),
           transitionDuration: AppConstant.krouteingAnimationDuration,
           transitionsBuilder: (_, animation, __, child) => ScaleTransition(
             scale: animation,
@@ -20,7 +37,7 @@ class AppRouter {
       case AppRoutes.productDetails:
         return PageRouteBuilder(
           settings: settings,
-          pageBuilder: (_, animation, __) => const ProductDeatils(),
+          pageBuilder: (_, animation, __) => const ProductDetails(),
           transitionDuration: AppConstant.krouteingAnimationDuration,
           transitionsBuilder: (_, animation, __, child) => ScaleTransition(
             scale: animation,
