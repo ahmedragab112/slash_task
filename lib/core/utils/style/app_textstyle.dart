@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:slash_task/core/utils/color/app_color.dart';
+import 'package:slash_task/core/utils/constant/app_constant.dart';
+
+class AppTextStyle {
+  static TextStyle font14BoldWhite = TextStyle(
+      fontSize: 14.sp,
+      fontFamily: AppConstant.fontFamily,
+      fontWeight: FontWeight.bold,
+      color: Colors.white);
+  static TextStyle font14RegularDarkBlue = TextStyle(
+    fontSize: 14.sp,
+    fontFamily: AppConstant.fontFamily,
+    fontWeight: FontWeight.w400,
+    color: AppColor.textBlueColor,
+  );
+
+  static TextStyle font11RegularBlueWit60Opacity = TextStyle(
+    fontSize: 12.sp,
+    fontFamily: AppConstant.fontFamily,
+    fontWeight: FontWeight.w400,
+    color: AppColor.blueColorWithOpacity60,
+  );
+  static TextStyle font25BoldBlue = TextStyle(
+    fontSize: 25.sp,
+    fontFamily: AppConstant.fontFamily,
+    fontWeight: FontWeight.bold,
+    color: AppColor.blueColor,
+  );
+  static TextStyle font18BoldBlue = TextStyle(
+    fontSize: 18.sp,
+    fontFamily: AppConstant.fontFamily,
+    fontWeight: FontWeight.bold,
+    color: AppColor.blueColor,
+  );
+}
