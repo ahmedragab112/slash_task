@@ -22,6 +22,7 @@ mixin _$HomeState {
     required TResult Function() loading,
     required TResult Function(ProductEntity data) loaded,
     required TResult Function(String error) failed,
+    required TResult Function() incrementCart,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$HomeState {
     TResult? Function()? loading,
     TResult? Function(ProductEntity data)? loaded,
     TResult? Function(String error)? failed,
+    TResult? Function()? incrementCart,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$HomeState {
     TResult Function()? loading,
     TResult Function(ProductEntity data)? loaded,
     TResult Function(String error)? failed,
+    TResult Function()? incrementCart,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$HomeState {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) loaded,
     required TResult Function(Fail value) failed,
+    required TResult Function(IncrementCart value) incrementCart,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$HomeState {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? loaded,
     TResult? Function(Fail value)? failed,
+    TResult? Function(IncrementCart value)? incrementCart,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$HomeState {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? loaded,
     TResult Function(Fail value)? failed,
+    TResult Function(IncrementCart value)? incrementCart,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,6 +133,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(ProductEntity data) loaded,
     required TResult Function(String error) failed,
+    required TResult Function() incrementCart,
   }) {
     return initial();
   }
@@ -138,6 +145,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(ProductEntity data)? loaded,
     TResult? Function(String error)? failed,
+    TResult? Function()? incrementCart,
   }) {
     return initial?.call();
   }
@@ -149,6 +157,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(ProductEntity data)? loaded,
     TResult Function(String error)? failed,
+    TResult Function()? incrementCart,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -164,6 +173,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) loaded,
     required TResult Function(Fail value) failed,
+    required TResult Function(IncrementCart value) incrementCart,
   }) {
     return initial(this);
   }
@@ -175,6 +185,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? loaded,
     TResult? Function(Fail value)? failed,
+    TResult? Function(IncrementCart value)? incrementCart,
   }) {
     return initial?.call(this);
   }
@@ -186,6 +197,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? loaded,
     TResult Function(Fail value)? failed,
+    TResult Function(IncrementCart value)? incrementCart,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -241,6 +253,7 @@ class _$LoadingImpl implements Loading {
     required TResult Function() loading,
     required TResult Function(ProductEntity data) loaded,
     required TResult Function(String error) failed,
+    required TResult Function() incrementCart,
   }) {
     return loading();
   }
@@ -252,6 +265,7 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? loading,
     TResult? Function(ProductEntity data)? loaded,
     TResult? Function(String error)? failed,
+    TResult? Function()? incrementCart,
   }) {
     return loading?.call();
   }
@@ -263,6 +277,7 @@ class _$LoadingImpl implements Loading {
     TResult Function()? loading,
     TResult Function(ProductEntity data)? loaded,
     TResult Function(String error)? failed,
+    TResult Function()? incrementCart,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -278,6 +293,7 @@ class _$LoadingImpl implements Loading {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) loaded,
     required TResult Function(Fail value) failed,
+    required TResult Function(IncrementCart value) incrementCart,
   }) {
     return loading(this);
   }
@@ -289,6 +305,7 @@ class _$LoadingImpl implements Loading {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? loaded,
     TResult? Function(Fail value)? failed,
+    TResult? Function(IncrementCart value)? incrementCart,
   }) {
     return loading?.call(this);
   }
@@ -300,6 +317,7 @@ class _$LoadingImpl implements Loading {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? loaded,
     TResult Function(Fail value)? failed,
+    TResult Function(IncrementCart value)? incrementCart,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -381,6 +399,7 @@ class _$SuccessImpl implements Success {
     required TResult Function() loading,
     required TResult Function(ProductEntity data) loaded,
     required TResult Function(String error) failed,
+    required TResult Function() incrementCart,
   }) {
     return loaded(data);
   }
@@ -392,6 +411,7 @@ class _$SuccessImpl implements Success {
     TResult? Function()? loading,
     TResult? Function(ProductEntity data)? loaded,
     TResult? Function(String error)? failed,
+    TResult? Function()? incrementCart,
   }) {
     return loaded?.call(data);
   }
@@ -403,6 +423,7 @@ class _$SuccessImpl implements Success {
     TResult Function()? loading,
     TResult Function(ProductEntity data)? loaded,
     TResult Function(String error)? failed,
+    TResult Function()? incrementCart,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -418,6 +439,7 @@ class _$SuccessImpl implements Success {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) loaded,
     required TResult Function(Fail value) failed,
+    required TResult Function(IncrementCart value) incrementCart,
   }) {
     return loaded(this);
   }
@@ -429,6 +451,7 @@ class _$SuccessImpl implements Success {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? loaded,
     TResult? Function(Fail value)? failed,
+    TResult? Function(IncrementCart value)? incrementCart,
   }) {
     return loaded?.call(this);
   }
@@ -440,6 +463,7 @@ class _$SuccessImpl implements Success {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? loaded,
     TResult Function(Fail value)? failed,
+    TResult Function(IncrementCart value)? incrementCart,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -525,6 +549,7 @@ class _$FailImpl implements Fail {
     required TResult Function() loading,
     required TResult Function(ProductEntity data) loaded,
     required TResult Function(String error) failed,
+    required TResult Function() incrementCart,
   }) {
     return failed(error);
   }
@@ -536,6 +561,7 @@ class _$FailImpl implements Fail {
     TResult? Function()? loading,
     TResult? Function(ProductEntity data)? loaded,
     TResult? Function(String error)? failed,
+    TResult? Function()? incrementCart,
   }) {
     return failed?.call(error);
   }
@@ -547,6 +573,7 @@ class _$FailImpl implements Fail {
     TResult Function()? loading,
     TResult Function(ProductEntity data)? loaded,
     TResult Function(String error)? failed,
+    TResult Function()? incrementCart,
     required TResult orElse(),
   }) {
     if (failed != null) {
@@ -562,6 +589,7 @@ class _$FailImpl implements Fail {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) loaded,
     required TResult Function(Fail value) failed,
+    required TResult Function(IncrementCart value) incrementCart,
   }) {
     return failed(this);
   }
@@ -573,6 +601,7 @@ class _$FailImpl implements Fail {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? loaded,
     TResult? Function(Fail value)? failed,
+    TResult? Function(IncrementCart value)? incrementCart,
   }) {
     return failed?.call(this);
   }
@@ -584,6 +613,7 @@ class _$FailImpl implements Fail {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? loaded,
     TResult Function(Fail value)? failed,
+    TResult Function(IncrementCart value)? incrementCart,
     required TResult orElse(),
   }) {
     if (failed != null) {
@@ -600,4 +630,124 @@ abstract class Fail implements HomeState {
   @JsonKey(ignore: true)
   _$$FailImplCopyWith<_$FailImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$IncrementCartImplCopyWith<$Res> {
+  factory _$$IncrementCartImplCopyWith(
+          _$IncrementCartImpl value, $Res Function(_$IncrementCartImpl) then) =
+      __$$IncrementCartImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$IncrementCartImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$IncrementCartImpl>
+    implements _$$IncrementCartImplCopyWith<$Res> {
+  __$$IncrementCartImplCopyWithImpl(
+      _$IncrementCartImpl _value, $Res Function(_$IncrementCartImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$IncrementCartImpl implements IncrementCart {
+  const _$IncrementCartImpl();
+
+  @override
+  String toString() {
+    return 'HomeState.incrementCart()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$IncrementCartImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(ProductEntity data) loaded,
+    required TResult Function(String error) failed,
+    required TResult Function() incrementCart,
+  }) {
+    return incrementCart();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(ProductEntity data)? loaded,
+    TResult? Function(String error)? failed,
+    TResult? Function()? incrementCart,
+  }) {
+    return incrementCart?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(ProductEntity data)? loaded,
+    TResult Function(String error)? failed,
+    TResult Function()? incrementCart,
+    required TResult orElse(),
+  }) {
+    if (incrementCart != null) {
+      return incrementCart();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) loaded,
+    required TResult Function(Fail value) failed,
+    required TResult Function(IncrementCart value) incrementCart,
+  }) {
+    return incrementCart(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? loaded,
+    TResult? Function(Fail value)? failed,
+    TResult? Function(IncrementCart value)? incrementCart,
+  }) {
+    return incrementCart?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? loaded,
+    TResult Function(Fail value)? failed,
+    TResult Function(IncrementCart value)? incrementCart,
+    required TResult orElse(),
+  }) {
+    if (incrementCart != null) {
+      return incrementCart(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class IncrementCart implements HomeState {
+  const factory IncrementCart() = _$IncrementCartImpl;
 }

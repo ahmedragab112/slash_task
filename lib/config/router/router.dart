@@ -4,8 +4,12 @@ import 'package:slash_task/core/api/dio_singlton.dart';
 import 'package:slash_task/core/api/web_service.dart';
 import 'package:slash_task/core/utils/constant/app_constant.dart';
 import 'package:slash_task/config/router/routes.dart';
+import 'package:slash_task/feature/features/deatils/data/datasources/details_data_soucre_implementation.dart';
+import 'package:slash_task/feature/features/deatils/data/repositories/details_repo_implementation.dart';
+import 'package:slash_task/feature/features/deatils/domain/usecases/details_usecase.dart';
+import 'package:slash_task/feature/features/deatils/presentation/manager/productdetils_cubit.dart';
 import 'package:slash_task/feature/features/deatils/presentation/pages/product_details.dart';
-import 'package:slash_task/feature/features/home/data/datasources/home_remotedata_soucre.dart';
+import 'package:slash_task/feature/features/home/data/datasources/home_remotedata_soucre_implementatio.dart';
 import 'package:slash_task/feature/features/home/data/repositories/home_repo_implementation.dart';
 import 'package:slash_task/feature/features/home/domain/usecases/home_usecase.dart';
 import 'package:slash_task/feature/features/home/presentation/manager/home_cubit.dart';
@@ -25,7 +29,8 @@ class AppRouter {
               apiManager: ApiManager(
                 DioFactory.getDio(),
               ),
-            )))),
+            ))))
+              ..getAllProducts(),
             child: const Home(),
           ),
           transitionDuration: AppConstant.krouteingAnimationDuration,
@@ -37,7 +42,15 @@ class AppRouter {
       case AppRoutes.productDetails:
         return PageRouteBuilder(
           settings: settings,
-          pageBuilder: (_, animation, __) => const ProductDetails(),
+          pageBuilder: (_, animation, __) => BlocProvider(
+            create: (context) => ProductdetilsCubit(
+                useCase: DetailsUseCase(
+                    repo: DeatilsRepoImplementation(
+              detailsDataSource: DetailsDataSourceImplementation(
+                  apiManager: ApiManager(DioFactory.getDio())),
+            ))),
+            child: const ProductDetails(),
+          ),
           transitionDuration: AppConstant.krouteingAnimationDuration,
           transitionsBuilder: (_, animation, __, child) => ScaleTransition(
             scale: animation,
