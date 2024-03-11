@@ -7,5 +7,5 @@ class DetailsDataSourceImplementation implements DetailsDataSource {
 
   const DetailsDataSourceImplementation({required this.apiManager});
   @override
-  Future<ProductDetailsDataModel> getProductDetails({required String id}) async => await apiManager.getProductDetails(id);
+  Future<ProductDetailsDataModel> getProductDetails({required int id}) async => await apiManager.getProductDetails(id);
 }

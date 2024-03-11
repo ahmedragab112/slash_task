@@ -9,7 +9,7 @@ class DeatilsRepoImplementation implements DeatilsRepo {
   DeatilsRepoImplementation({required this.detailsDataSource});
   @override
   Future<ApiResponse<ProductDetailsEntity>> getProductDetails(
-      {required String id}) async {
+      {required int id}) async {
     try {
       var data = await detailsDataSource.getProductDetails(id: id);
       return ApiResponse.data(data);

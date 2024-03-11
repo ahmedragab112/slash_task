@@ -16,5 +16,5 @@ abstract class ApiManager {
       @Query('limit') String limit, @Query('page') String page);
 
   @GET('${AppEndPoint.getProductDetails}/{id}')
-  Future<ProductDetailsDataModel> getProductDetails(@Path('id') String id);
+  Future<ProductDetailsDataModel> getProductDetails(@Path('id') int id);
 }
