@@ -3,8 +3,9 @@
 import 'package:slash_task/feature/features/deatils/domain/entities/product_details_entity.dart';
 
 class ProductDetailsDataModel extends ProductDetailsEntity {
-  ProductDetailsDataModel({super.data, super.message, super.statusCode});
-
+  ProductDetailsDataModel({super.data, this.message, this.statusCode});
+ String? message;
+  int? statusCode;
   ProductDetailsDataModel.fromJson(Map<String, dynamic> json) {
     data = json['data'] != null ? Data.fromJson(json['data']) : null;
     message = json['message'];

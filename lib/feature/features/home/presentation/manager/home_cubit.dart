@@ -25,7 +25,7 @@ class HomeCubit extends Cubit<HomeState> {
             emit(HomeState.failed(error: error.apiErrorModel.message!)));
   }
 
-void  addToCartCounter() {
+  void addToCartCounter() {
     emit(const HomeState.initial());
     cartCounter++;
     emit(const HomeState.incrementCart());

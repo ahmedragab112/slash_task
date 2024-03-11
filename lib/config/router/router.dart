@@ -17,7 +17,9 @@ import 'package:slash_task/feature/features/home/presentation/pages/home.dart';
 
 class AppRouter {
   static Route<Widget>? onGenerateRoute(RouteSettings settings) {
+    final int id = settings.arguments as int?  ?? 0;
     switch (settings.name) {
+      
       case AppRoutes.homeProducts:
         return PageRouteBuilder(
           settings: settings,
@@ -49,7 +51,7 @@ class AppRouter {
               detailsDataSource: DetailsDataSourceImplementation(
                   apiManager: ApiManager(DioFactory.getDio())),
             ))),
-            child: const ProductDetails(),
+            child:  ProductDetails(id:id ,),
           ),
           transitionDuration: AppConstant.krouteingAnimationDuration,
           transitionsBuilder: (_, animation, __, child) => ScaleTransition(

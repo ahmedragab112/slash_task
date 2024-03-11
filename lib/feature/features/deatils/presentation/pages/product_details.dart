@@ -1,18 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:slash_task/core/spaceing/spaceing.dart';
+import 'package:slash_task/core/utils/strings/app_strings.dart';
 import 'package:slash_task/feature/features/deatils/presentation/manager/productdetils_cubit.dart';
+import 'package:slash_task/feature/features/deatils/presentation/widgets/details_body.dart';
 
-class ProductDetails extends StatelessWidget {
-  const ProductDetails({super.key});
+class ProductDetails extends StatefulWidget {
+  const ProductDetails({super.key, required this.id});
+  final int id;
+
+  @override
+  State<ProductDetails> createState() => _ProductDetailsState();
+}
+
+class _ProductDetailsState extends State<ProductDetails> {
+  @override
+  void initState() {
+    context.read<ProductdetilsCubit>().getProductDetails(id: widget.id);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async{
-         await context.read<ProductdetilsCubit>().getProductDetails(id: '10');
-        },
+      appBar: AppBar(
+        leading: IconButton.outlined(
+            onPressed: () => Navigator.pop(context),
+            icon: const Icon(Icons.arrow_back)),
+        title: const Text(AppStrings.productDetails),
+        actions: [
+          Icon(
+            Icons.shopping_cart_outlined,
+            size: 30.sp,
+          ),
+          const HorizantelSpace(16),
+        ],
       ),
+      body: const DetailsBody(),
     );
   }
 }
