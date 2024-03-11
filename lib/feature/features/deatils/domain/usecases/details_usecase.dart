@@ -6,5 +6,5 @@ class DetailsUseCase {
   DeatilsRepo repo;
   DetailsUseCase({required this.repo});
   Future<ApiResponse<ProductDetailsEntity>> getProductDetails(
-      {required String id}) async => await repo.getProductDetails(id: id);
+      {required int id}) async => await repo.getProductDetails(id: id);
 }

@@ -4,6 +4,12 @@ import 'package:slash_task/core/utils/color/app_color.dart';
 import 'package:slash_task/core/utils/constant/app_constant.dart';
 
 class AppTextStyle {
+  static TextStyle font20MeduimDarkBlue = TextStyle(
+    fontSize: 20.sp,
+    fontFamily: AppConstant.fontFamily,
+    fontWeight: FontWeight.w500,
+    color: AppColor.blueDark,
+  );
   static TextStyle font14BoldWhite = TextStyle(
       fontSize: 14.sp,
       fontFamily: AppConstant.fontFamily,
@@ -33,5 +39,11 @@ class AppTextStyle {
     fontFamily: AppConstant.fontFamily,
     fontWeight: FontWeight.bold,
     color: AppColor.blueColor,
+  );
+  static TextStyle font14DarkBlueWith60OpacityMeduim = TextStyle(
+    fontSize: 14.sp,
+    fontFamily: AppConstant.fontFamily,
+    fontWeight: FontWeight.w500,
+    color: AppColor.blueColorWithOpacity60,
   );
 }

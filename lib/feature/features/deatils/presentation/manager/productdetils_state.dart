@@ -14,4 +14,5 @@ class ProductdetilsState with _$ProductdetilsState {
   const factory ProductdetilsState.getProductDetailsLoading()= GetProductDetailsLoading;
 
 
+
 }
