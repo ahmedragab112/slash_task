@@ -1,9 +1,8 @@
 class ProductDetailsEntity {
   DataEntity? data;
-  String? message;
-  int? statusCode;
+ 
 
-  ProductDetailsEntity({this.data, this.message, this.statusCode});
+  ProductDetailsEntity({this.data});
 }
 
 class DataEntity {
@@ -32,14 +31,11 @@ class DataEntity {
 
 class VariationsEntity {
   int? id;
-  int? price;
+  num? price;
   int? quantity;
   bool? inStock;
   List<ProductVarientImagesEntity>? productVarientImages;
   List<ProductPropertiesValuesEntity>? productPropertiesValues;
- 
-
-
   VariationsEntity(
       {this.id,
       this.price,

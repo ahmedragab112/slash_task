@@ -54,7 +54,7 @@ class _ApiManager implements ApiManager {
   }
 
   @override
-  Future<ProductDetailsDataModel> getProductDetails(String id) async {
+  Future<ProductDetailsDataModel> getProductDetails(int id) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
