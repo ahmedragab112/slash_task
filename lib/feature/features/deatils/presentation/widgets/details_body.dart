@@ -14,8 +14,8 @@ class DetailsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var cubit = context.read<ProductdetilsCubit>();
-    return BlocBuilder<ProductdetilsCubit, ProductdetilsState>(
+    var cubit = context.read<ProductDetailsCubit>();
+    return BlocBuilder<ProductDetailsCubit, ProductdetilsState>(
       builder: (context, state) {
         if (state is GetProductDetailsSuccess ||
             state is ChangeSliderIndex ||
@@ -28,7 +28,7 @@ class DetailsBody extends StatelessWidget {
                   cubit: cubit,
                 ),
               ),
-                  SliverToBoxAdapter(
+              SliverToBoxAdapter(
                 child: ProductDetailsBody(
                   cubit: cubit,
                 ),
@@ -58,9 +58,11 @@ class DetailsBody extends StatelessWidget {
               ))
             ],
           );
-        } else if (state is GetProductDetailsLoading ) {
-          return  Center(
-            child: CircularProgressIndicator( color: AppColor.blueColor,),
+        } else if (state is GetProductDetailsLoading) {
+          return Center(
+            child: CircularProgressIndicator(
+              color: AppColor.blueColor,
+            ),
           );
         }
         return const SizedBox();

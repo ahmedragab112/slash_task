@@ -8,9 +8,12 @@ import 'package:slash_task/feature/features/deatils/presentation/widgets/select_
 
 class QuantityAndRating extends StatelessWidget {
   const QuantityAndRating(
-      {super.key, required this.quntity, required this.rating, required this.cubit});
+      {super.key,
+      required this.quntity,
+      required this.rating,
+      required this.cubit});
   final String quntity;
-  final ProductdetilsCubit cubit;
+  final ProductDetailsCubit cubit;
   final int rating;
 
   @override
@@ -40,7 +43,8 @@ class QuantityAndRating extends StatelessWidget {
         const HorizantelSpace(4),
         Text('$rating ', style: AppTextStyle.font14RegularDarkBlue),
         const HorizantelSpace(20),
-        Expanded(child: SelectQuantity(avaliable:int.parse(quntity), cubit : cubit))
+        Expanded(
+            child: SelectQuantity(avaliable: int.parse(quntity), cubit: cubit))
       ],
     );
   }

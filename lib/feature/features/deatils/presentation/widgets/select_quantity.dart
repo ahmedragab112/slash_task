@@ -10,7 +10,7 @@ class SelectQuantity extends StatelessWidget {
   const SelectQuantity(
       {super.key, required this.avaliable, required this.cubit});
   final int avaliable;
-  final ProductdetilsCubit cubit;
+  final ProductDetailsCubit cubit;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class SelectQuantity extends StatelessWidget {
               },
               icon: Icons.remove,
             ),
-            BlocBuilder<ProductdetilsCubit, ProductdetilsState>(
+            BlocBuilder<ProductDetailsCubit, ProductdetilsState>(
               builder: (context, state) {
                 return Text(
                   cubit.quantity.toString(),

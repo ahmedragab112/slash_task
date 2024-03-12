@@ -17,7 +17,7 @@ class AnOtherProductsFromTheSameVariations extends StatelessWidget {
 
   final int index;
   final VariationsEntity variationsEntity;
-  final ProductdetilsCubit cubit;
+  final ProductDetailsCubit cubit;
 
   @override
   Widget build(BuildContext context) {

@@ -10,7 +10,7 @@ import 'package:slash_task/feature/features/deatils/presentation/manager/product
 class AddToCartAndCheckOut extends StatefulWidget {
   const AddToCartAndCheckOut({super.key, required this.cubit});
 
-  final ProductdetilsCubit cubit;
+  final ProductDetailsCubit cubit;
 
   @override
   State<AddToCartAndCheckOut> createState() => _AddToCartAndCheckOutState();
@@ -30,7 +30,7 @@ class _AddToCartAndCheckOutState extends State<AddToCartAndCheckOut> {
                   .copyWith(color: AppColor.blueColorWithOpacity60),
             ),
             const VerticalSpace(10),
-            BlocBuilder<ProductdetilsCubit, ProductdetilsState>(
+            BlocBuilder<ProductDetailsCubit, ProductdetilsState>(
               builder: (context, state) {
                 return Text(
                   'EGP ${widget.cubit.quantity * (widget.cubit.productDetailsEntity?.data?.variations?[widget.cubit.variationsIndex].price ?? 0)}',
