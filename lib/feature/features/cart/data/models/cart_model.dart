@@ -1,15 +1,15 @@
 class CartModel {
-  final int id;
-  final String productName;
-  final String? productColor;
-  final String? productSize;
-  final String price;
-  final String? productImage;
-  final int? color;
-  final String quantity;
+   int id;
+   String productName;
+   String? productColor;
+   String? productSize;
+   int price;
+   String? productImage;
+   int? color;
+   int quantity;
 
 
-  const CartModel( 
+   CartModel( 
       {required this.quantity,required this.id,
       required this.productName,
       this.productColor,

@@ -37,7 +37,10 @@ class AddToCartAndCheckOut extends StatelessWidget {
           ],
         ),
         const HorizantelSpace(30),
-        const Expanded(child: AddToCartButton()),
+        const Expanded(
+            child: AddToCartButton(
+          text: 'Add to cart',
+        )),
       ],
     ).setPadding(context, horizontal: 16);
   }

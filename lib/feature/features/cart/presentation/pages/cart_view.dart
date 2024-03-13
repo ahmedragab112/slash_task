@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:slash_task/core/extention/extention.dart';
 import 'package:slash_task/core/spaceing/spaceing.dart';
+import 'package:slash_task/core/utils/color/app_color.dart';
 import 'package:slash_task/core/utils/strings/app_strings.dart';
 import 'package:slash_task/core/utils/style/app_textstyle.dart';
+import 'package:slash_task/core/utils/widget/add_to_cart_button.dart';
 import 'package:slash_task/feature/features/cart/data/models/cart_model.dart';
 import 'package:slash_task/feature/features/cart/presentation/widgets/product_iteam_cart.dart';
 
@@ -32,12 +34,12 @@ class CartView extends StatelessWidget {
             physics: const BouncingScrollPhysics(),
             slivers: [
               SliverList.separated(
-                itemBuilder: (context, index) => const ProductCartIteam(
+                itemBuilder: (context, index) => ProductCartIteam(
                     carte: CartModel(
-                  quantity: '10',
+                  quantity: 10,
                   id: 1,
                   productName: 'Nicks ',
-                  price: '2000',
+                  price: 2000,
                   color: 12324,
                   productColor: 'Red',
                   productImage:
@@ -46,6 +48,36 @@ class CartView extends StatelessWidget {
                 )),
                 separatorBuilder: (context, index) => const VerticalSpace(10),
                 itemCount: 20,
+              ),
+              const SliverToBoxAdapter(child: VerticalSpace(50)),
+              SliverToBoxAdapter(
+                child: Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Total price ',
+                          style: AppTextStyle.font18BoldBlue
+                              .copyWith(color: AppColor.blueColorWithOpacity60),
+                        ),
+                        const VerticalSpace(10),
+                        Text(
+                          'EGP 35000',
+                          style: AppTextStyle.font18BoldBlue.copyWith(
+                              color: AppColor.blueDark,
+                              fontWeight: FontWeight.w500),
+                        )
+                      ],
+                    ),
+                    const HorizantelSpace(30),
+                    const Expanded(
+                        child: AddToCartButton(
+                      text: 'Check Out',
+                      icon: Icons.arrow_right_alt_rounded,
+                    )),
+                  ],
+                ),
               )
             ],
           ).setPadding(context, horizontal: 16, vertical: 28)),

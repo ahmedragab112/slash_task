@@ -11,7 +11,6 @@ import 'package:slash_task/feature/features/deatils/presentation/widgets/custom_
 
 class ProductCartIteam extends StatelessWidget {
   const ProductCartIteam({super.key, required this.carte});
-
   final CartModel carte;
   @override
   Widget build(BuildContext context) {
@@ -104,7 +103,7 @@ class ProductCartIteam extends StatelessWidget {
                                 icon: Icons.remove,
                               ),
                               Text(
-                                carte.quantity,
+                                carte.quantity.toString(),
                                 style: AppTextStyle.font20MeduimDarkBlue
                                     .copyWith(color: Colors.white),
                               ),

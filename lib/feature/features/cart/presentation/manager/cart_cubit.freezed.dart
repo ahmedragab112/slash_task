@@ -20,49 +20,67 @@ mixin _$CartState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<CartModel> cartList) loaded,
+    required TResult Function() addToCart,
     required TResult Function(String message) error,
+    required TResult Function() increment,
+    required TResult Function() getTotalPrice,
+    required TResult Function() decrement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<CartModel> cartList)? loaded,
+    TResult? Function()? addToCart,
     TResult? Function(String message)? error,
+    TResult? Function()? increment,
+    TResult? Function()? getTotalPrice,
+    TResult? Function()? decrement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<CartModel> cartList)? loaded,
+    TResult Function()? addToCart,
     TResult Function(String message)? error,
+    TResult Function()? increment,
+    TResult Function()? getTotalPrice,
+    TResult Function()? decrement,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
+    required TResult Function(Loading value) loading,
+    required TResult Function(AddToCart value) addToCart,
+    required TResult Function(Error value) error,
+    required TResult Function(Increment value) increment,
+    required TResult Function(GetTotalPrice value) getTotalPrice,
+    required TResult Function(Decrement value) decrement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(AddToCart value)? addToCart,
+    TResult? Function(Error value)? error,
+    TResult? Function(Increment value)? increment,
+    TResult? Function(GetTotalPrice value)? getTotalPrice,
+    TResult? Function(Decrement value)? decrement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
+    TResult Function(Loading value)? loading,
+    TResult Function(AddToCart value)? addToCart,
+    TResult Function(Error value)? error,
+    TResult Function(Increment value)? increment,
+    TResult Function(GetTotalPrice value)? getTotalPrice,
+    TResult Function(Decrement value)? decrement,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -125,8 +143,11 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<CartModel> cartList) loaded,
+    required TResult Function() addToCart,
     required TResult Function(String message) error,
+    required TResult Function() increment,
+    required TResult Function() getTotalPrice,
+    required TResult Function() decrement,
   }) {
     return initial();
   }
@@ -136,8 +157,11 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<CartModel> cartList)? loaded,
+    TResult? Function()? addToCart,
     TResult? Function(String message)? error,
+    TResult? Function()? increment,
+    TResult? Function()? getTotalPrice,
+    TResult? Function()? decrement,
   }) {
     return initial?.call();
   }
@@ -147,8 +171,11 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<CartModel> cartList)? loaded,
+    TResult Function()? addToCart,
     TResult Function(String message)? error,
+    TResult Function()? increment,
+    TResult Function()? getTotalPrice,
+    TResult Function()? decrement,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -161,9 +188,12 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
+    required TResult Function(Loading value) loading,
+    required TResult Function(AddToCart value) addToCart,
+    required TResult Function(Error value) error,
+    required TResult Function(Increment value) increment,
+    required TResult Function(GetTotalPrice value) getTotalPrice,
+    required TResult Function(Decrement value) decrement,
   }) {
     return initial(this);
   }
@@ -172,9 +202,12 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(AddToCart value)? addToCart,
+    TResult? Function(Error value)? error,
+    TResult? Function(Increment value)? increment,
+    TResult? Function(GetTotalPrice value)? getTotalPrice,
+    TResult? Function(Decrement value)? decrement,
   }) {
     return initial?.call(this);
   }
@@ -183,9 +216,12 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
+    TResult Function(Loading value)? loading,
+    TResult Function(AddToCart value)? addToCart,
+    TResult Function(Error value)? error,
+    TResult Function(Increment value)? increment,
+    TResult Function(GetTotalPrice value)? getTotalPrice,
+    TResult Function(Decrement value)? decrement,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -217,7 +253,7 @@ class __$$LoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingImpl implements _Loading {
+class _$LoadingImpl implements Loading {
   const _$LoadingImpl();
 
   @override
@@ -239,8 +275,11 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<CartModel> cartList) loaded,
+    required TResult Function() addToCart,
     required TResult Function(String message) error,
+    required TResult Function() increment,
+    required TResult Function() getTotalPrice,
+    required TResult Function() decrement,
   }) {
     return loading();
   }
@@ -250,8 +289,11 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<CartModel> cartList)? loaded,
+    TResult? Function()? addToCart,
     TResult? Function(String message)? error,
+    TResult? Function()? increment,
+    TResult? Function()? getTotalPrice,
+    TResult? Function()? decrement,
   }) {
     return loading?.call();
   }
@@ -261,8 +303,11 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<CartModel> cartList)? loaded,
+    TResult Function()? addToCart,
     TResult Function(String message)? error,
+    TResult Function()? increment,
+    TResult Function()? getTotalPrice,
+    TResult Function()? decrement,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -275,9 +320,12 @@ class _$LoadingImpl implements _Loading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
+    required TResult Function(Loading value) loading,
+    required TResult Function(AddToCart value) addToCart,
+    required TResult Function(Error value) error,
+    required TResult Function(Increment value) increment,
+    required TResult Function(GetTotalPrice value) getTotalPrice,
+    required TResult Function(Decrement value) decrement,
   }) {
     return loading(this);
   }
@@ -286,9 +334,12 @@ class _$LoadingImpl implements _Loading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(AddToCart value)? addToCart,
+    TResult? Function(Error value)? error,
+    TResult? Function(Increment value)? increment,
+    TResult? Function(GetTotalPrice value)? getTotalPrice,
+    TResult? Function(Decrement value)? decrement,
   }) {
     return loading?.call(this);
   }
@@ -297,9 +348,12 @@ class _$LoadingImpl implements _Loading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
+    TResult Function(Loading value)? loading,
+    TResult Function(AddToCart value)? addToCart,
+    TResult Function(Error value)? error,
+    TResult Function(Increment value)? increment,
+    TResult Function(GetTotalPrice value)? getTotalPrice,
+    TResult Function(Decrement value)? decrement,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -309,87 +363,57 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements CartState {
-  const factory _Loading() = _$LoadingImpl;
+abstract class Loading implements CartState {
+  const factory Loading() = _$LoadingImpl;
 }
 
 /// @nodoc
-abstract class _$$LoadedImplCopyWith<$Res> {
-  factory _$$LoadedImplCopyWith(
-          _$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
-      __$$LoadedImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({List<CartModel> cartList});
+abstract class _$$AddToCartImplCopyWith<$Res> {
+  factory _$$AddToCartImplCopyWith(
+          _$AddToCartImpl value, $Res Function(_$AddToCartImpl) then) =
+      __$$AddToCartImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadedImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$LoadedImpl>
-    implements _$$LoadedImplCopyWith<$Res> {
-  __$$LoadedImplCopyWithImpl(
-      _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
+class __$$AddToCartImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$AddToCartImpl>
+    implements _$$AddToCartImplCopyWith<$Res> {
+  __$$AddToCartImplCopyWithImpl(
+      _$AddToCartImpl _value, $Res Function(_$AddToCartImpl) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? cartList = null,
-  }) {
-    return _then(_$LoadedImpl(
-      cartList: null == cartList
-          ? _value._cartList
-          : cartList // ignore: cast_nullable_to_non_nullable
-              as List<CartModel>,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$LoadedImpl implements _Loaded {
-  const _$LoadedImpl({required final List<CartModel> cartList})
-      : _cartList = cartList;
-
-  final List<CartModel> _cartList;
-  @override
-  List<CartModel> get cartList {
-    if (_cartList is EqualUnmodifiableListView) return _cartList;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_cartList);
-  }
+class _$AddToCartImpl implements AddToCart {
+  const _$AddToCartImpl();
 
   @override
   String toString() {
-    return 'CartState.loaded(cartList: $cartList)';
+    return 'CartState.addToCart()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$LoadedImpl &&
-            const DeepCollectionEquality().equals(other._cartList, _cartList));
+        (other.runtimeType == runtimeType && other is _$AddToCartImpl);
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_cartList));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
-      __$$LoadedImplCopyWithImpl<_$LoadedImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<CartModel> cartList) loaded,
+    required TResult Function() addToCart,
     required TResult Function(String message) error,
+    required TResult Function() increment,
+    required TResult Function() getTotalPrice,
+    required TResult Function() decrement,
   }) {
-    return loaded(cartList);
+    return addToCart();
   }
 
   @override
@@ -397,10 +421,13 @@ class _$LoadedImpl implements _Loaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<CartModel> cartList)? loaded,
+    TResult? Function()? addToCart,
     TResult? Function(String message)? error,
+    TResult? Function()? increment,
+    TResult? Function()? getTotalPrice,
+    TResult? Function()? decrement,
   }) {
-    return loaded?.call(cartList);
+    return addToCart?.call();
   }
 
   @override
@@ -408,12 +435,15 @@ class _$LoadedImpl implements _Loaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<CartModel> cartList)? loaded,
+    TResult Function()? addToCart,
     TResult Function(String message)? error,
+    TResult Function()? increment,
+    TResult Function()? getTotalPrice,
+    TResult Function()? decrement,
     required TResult orElse(),
   }) {
-    if (loaded != null) {
-      return loaded(cartList);
+    if (addToCart != null) {
+      return addToCart();
     }
     return orElse();
   }
@@ -422,48 +452,51 @@ class _$LoadedImpl implements _Loaded {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
+    required TResult Function(Loading value) loading,
+    required TResult Function(AddToCart value) addToCart,
+    required TResult Function(Error value) error,
+    required TResult Function(Increment value) increment,
+    required TResult Function(GetTotalPrice value) getTotalPrice,
+    required TResult Function(Decrement value) decrement,
   }) {
-    return loaded(this);
+    return addToCart(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(AddToCart value)? addToCart,
+    TResult? Function(Error value)? error,
+    TResult? Function(Increment value)? increment,
+    TResult? Function(GetTotalPrice value)? getTotalPrice,
+    TResult? Function(Decrement value)? decrement,
   }) {
-    return loaded?.call(this);
+    return addToCart?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
+    TResult Function(Loading value)? loading,
+    TResult Function(AddToCart value)? addToCart,
+    TResult Function(Error value)? error,
+    TResult Function(Increment value)? increment,
+    TResult Function(GetTotalPrice value)? getTotalPrice,
+    TResult Function(Decrement value)? decrement,
     required TResult orElse(),
   }) {
-    if (loaded != null) {
-      return loaded(this);
+    if (addToCart != null) {
+      return addToCart(this);
     }
     return orElse();
   }
 }
 
-abstract class _Loaded implements CartState {
-  const factory _Loaded({required final List<CartModel> cartList}) =
-      _$LoadedImpl;
-
-  List<CartModel> get cartList;
-  @JsonKey(ignore: true)
-  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+abstract class AddToCart implements CartState {
+  const factory AddToCart() = _$AddToCartImpl;
 }
 
 /// @nodoc
@@ -499,7 +532,7 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl implements _Error {
+class _$ErrorImpl implements Error {
   const _$ErrorImpl(this.message);
 
   @override
@@ -532,8 +565,11 @@ class _$ErrorImpl implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<CartModel> cartList) loaded,
+    required TResult Function() addToCart,
     required TResult Function(String message) error,
+    required TResult Function() increment,
+    required TResult Function() getTotalPrice,
+    required TResult Function() decrement,
   }) {
     return error(message);
   }
@@ -543,8 +579,11 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<CartModel> cartList)? loaded,
+    TResult? Function()? addToCart,
     TResult? Function(String message)? error,
+    TResult? Function()? increment,
+    TResult? Function()? getTotalPrice,
+    TResult? Function()? decrement,
   }) {
     return error?.call(message);
   }
@@ -554,8 +593,11 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<CartModel> cartList)? loaded,
+    TResult Function()? addToCart,
     TResult Function(String message)? error,
+    TResult Function()? increment,
+    TResult Function()? getTotalPrice,
+    TResult Function()? decrement,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -568,9 +610,12 @@ class _$ErrorImpl implements _Error {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
+    required TResult Function(Loading value) loading,
+    required TResult Function(AddToCart value) addToCart,
+    required TResult Function(Error value) error,
+    required TResult Function(Increment value) increment,
+    required TResult Function(GetTotalPrice value) getTotalPrice,
+    required TResult Function(Decrement value) decrement,
   }) {
     return error(this);
   }
@@ -579,9 +624,12 @@ class _$ErrorImpl implements _Error {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(AddToCart value)? addToCart,
+    TResult? Function(Error value)? error,
+    TResult? Function(Increment value)? increment,
+    TResult? Function(GetTotalPrice value)? getTotalPrice,
+    TResult? Function(Decrement value)? decrement,
   }) {
     return error?.call(this);
   }
@@ -590,9 +638,12 @@ class _$ErrorImpl implements _Error {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
+    TResult Function(Loading value)? loading,
+    TResult Function(AddToCart value)? addToCart,
+    TResult Function(Error value)? error,
+    TResult Function(Increment value)? increment,
+    TResult Function(GetTotalPrice value)? getTotalPrice,
+    TResult Function(Decrement value)? decrement,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -602,11 +653,407 @@ class _$ErrorImpl implements _Error {
   }
 }
 
-abstract class _Error implements CartState {
-  const factory _Error(final String message) = _$ErrorImpl;
+abstract class Error implements CartState {
+  const factory Error(final String message) = _$ErrorImpl;
 
   String get message;
   @JsonKey(ignore: true)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$IncrementImplCopyWith<$Res> {
+  factory _$$IncrementImplCopyWith(
+          _$IncrementImpl value, $Res Function(_$IncrementImpl) then) =
+      __$$IncrementImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$IncrementImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$IncrementImpl>
+    implements _$$IncrementImplCopyWith<$Res> {
+  __$$IncrementImplCopyWithImpl(
+      _$IncrementImpl _value, $Res Function(_$IncrementImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$IncrementImpl implements Increment {
+  const _$IncrementImpl();
+
+  @override
+  String toString() {
+    return 'CartState.increment()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$IncrementImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() addToCart,
+    required TResult Function(String message) error,
+    required TResult Function() increment,
+    required TResult Function() getTotalPrice,
+    required TResult Function() decrement,
+  }) {
+    return increment();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? addToCart,
+    TResult? Function(String message)? error,
+    TResult? Function()? increment,
+    TResult? Function()? getTotalPrice,
+    TResult? Function()? decrement,
+  }) {
+    return increment?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? addToCart,
+    TResult Function(String message)? error,
+    TResult Function()? increment,
+    TResult Function()? getTotalPrice,
+    TResult Function()? decrement,
+    required TResult orElse(),
+  }) {
+    if (increment != null) {
+      return increment();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(AddToCart value) addToCart,
+    required TResult Function(Error value) error,
+    required TResult Function(Increment value) increment,
+    required TResult Function(GetTotalPrice value) getTotalPrice,
+    required TResult Function(Decrement value) decrement,
+  }) {
+    return increment(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(AddToCart value)? addToCart,
+    TResult? Function(Error value)? error,
+    TResult? Function(Increment value)? increment,
+    TResult? Function(GetTotalPrice value)? getTotalPrice,
+    TResult? Function(Decrement value)? decrement,
+  }) {
+    return increment?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(AddToCart value)? addToCart,
+    TResult Function(Error value)? error,
+    TResult Function(Increment value)? increment,
+    TResult Function(GetTotalPrice value)? getTotalPrice,
+    TResult Function(Decrement value)? decrement,
+    required TResult orElse(),
+  }) {
+    if (increment != null) {
+      return increment(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Increment implements CartState {
+  const factory Increment() = _$IncrementImpl;
+}
+
+/// @nodoc
+abstract class _$$GetTotalPriceImplCopyWith<$Res> {
+  factory _$$GetTotalPriceImplCopyWith(
+          _$GetTotalPriceImpl value, $Res Function(_$GetTotalPriceImpl) then) =
+      __$$GetTotalPriceImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetTotalPriceImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$GetTotalPriceImpl>
+    implements _$$GetTotalPriceImplCopyWith<$Res> {
+  __$$GetTotalPriceImplCopyWithImpl(
+      _$GetTotalPriceImpl _value, $Res Function(_$GetTotalPriceImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetTotalPriceImpl implements GetTotalPrice {
+  const _$GetTotalPriceImpl();
+
+  @override
+  String toString() {
+    return 'CartState.getTotalPrice()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetTotalPriceImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() addToCart,
+    required TResult Function(String message) error,
+    required TResult Function() increment,
+    required TResult Function() getTotalPrice,
+    required TResult Function() decrement,
+  }) {
+    return getTotalPrice();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? addToCart,
+    TResult? Function(String message)? error,
+    TResult? Function()? increment,
+    TResult? Function()? getTotalPrice,
+    TResult? Function()? decrement,
+  }) {
+    return getTotalPrice?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? addToCart,
+    TResult Function(String message)? error,
+    TResult Function()? increment,
+    TResult Function()? getTotalPrice,
+    TResult Function()? decrement,
+    required TResult orElse(),
+  }) {
+    if (getTotalPrice != null) {
+      return getTotalPrice();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(AddToCart value) addToCart,
+    required TResult Function(Error value) error,
+    required TResult Function(Increment value) increment,
+    required TResult Function(GetTotalPrice value) getTotalPrice,
+    required TResult Function(Decrement value) decrement,
+  }) {
+    return getTotalPrice(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(AddToCart value)? addToCart,
+    TResult? Function(Error value)? error,
+    TResult? Function(Increment value)? increment,
+    TResult? Function(GetTotalPrice value)? getTotalPrice,
+    TResult? Function(Decrement value)? decrement,
+  }) {
+    return getTotalPrice?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(AddToCart value)? addToCart,
+    TResult Function(Error value)? error,
+    TResult Function(Increment value)? increment,
+    TResult Function(GetTotalPrice value)? getTotalPrice,
+    TResult Function(Decrement value)? decrement,
+    required TResult orElse(),
+  }) {
+    if (getTotalPrice != null) {
+      return getTotalPrice(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetTotalPrice implements CartState {
+  const factory GetTotalPrice() = _$GetTotalPriceImpl;
+}
+
+/// @nodoc
+abstract class _$$DecrementImplCopyWith<$Res> {
+  factory _$$DecrementImplCopyWith(
+          _$DecrementImpl value, $Res Function(_$DecrementImpl) then) =
+      __$$DecrementImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DecrementImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$DecrementImpl>
+    implements _$$DecrementImplCopyWith<$Res> {
+  __$$DecrementImplCopyWithImpl(
+      _$DecrementImpl _value, $Res Function(_$DecrementImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DecrementImpl implements Decrement {
+  const _$DecrementImpl();
+
+  @override
+  String toString() {
+    return 'CartState.decrement()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$DecrementImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() addToCart,
+    required TResult Function(String message) error,
+    required TResult Function() increment,
+    required TResult Function() getTotalPrice,
+    required TResult Function() decrement,
+  }) {
+    return decrement();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? addToCart,
+    TResult? Function(String message)? error,
+    TResult? Function()? increment,
+    TResult? Function()? getTotalPrice,
+    TResult? Function()? decrement,
+  }) {
+    return decrement?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? addToCart,
+    TResult Function(String message)? error,
+    TResult Function()? increment,
+    TResult Function()? getTotalPrice,
+    TResult Function()? decrement,
+    required TResult orElse(),
+  }) {
+    if (decrement != null) {
+      return decrement();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(AddToCart value) addToCart,
+    required TResult Function(Error value) error,
+    required TResult Function(Increment value) increment,
+    required TResult Function(GetTotalPrice value) getTotalPrice,
+    required TResult Function(Decrement value) decrement,
+  }) {
+    return decrement(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(AddToCart value)? addToCart,
+    TResult? Function(Error value)? error,
+    TResult? Function(Increment value)? increment,
+    TResult? Function(GetTotalPrice value)? getTotalPrice,
+    TResult? Function(Decrement value)? decrement,
+  }) {
+    return decrement?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(AddToCart value)? addToCart,
+    TResult Function(Error value)? error,
+    TResult Function(Increment value)? increment,
+    TResult Function(GetTotalPrice value)? getTotalPrice,
+    TResult Function(Decrement value)? decrement,
+    required TResult orElse(),
+  }) {
+    if (decrement != null) {
+      return decrement(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Decrement implements CartState {
+  const factory Decrement() = _$DecrementImpl;
 }

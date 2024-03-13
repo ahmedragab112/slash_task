@@ -55,7 +55,7 @@ class HomeBody extends StatelessWidget {
                       itemBuilder: (context, index) => Product(
                             data: data.data![index],
                           )),
-                  failed: (error) => SliverToBoxAdapter(child: Text(error)),
+                  failed: (error) => SliverToBoxAdapter(child: Center(child: Text(error))),
                   orElse: () => const SliverToBoxAdapter());
             },
           ),

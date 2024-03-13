@@ -6,7 +6,7 @@ import 'package:slash_task/config/router/routes.dart';
 import 'package:slash_task/core/extention/extention.dart';
 import 'package:slash_task/core/utils/color/app_color.dart';
 import 'package:slash_task/core/utils/style/app_textstyle.dart';
-import 'package:slash_task/feature/features/home/presentation/manager/home_cubit.dart';
+import 'package:slash_task/feature/features/cart/presentation/manager/cart_cubit.dart';
 
 class Cart extends StatelessWidget {
   const Cart({
@@ -15,7 +15,7 @@ class Cart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var cubit = context.read<HomeCubit>();
+    var cubit = context.read<CartCubit>();
     return GestureDetector(
       onTap: () {
         context.pushNamed(AppRoutes.addToCart);
@@ -26,9 +26,9 @@ class Cart extends StatelessWidget {
           ),
           position: badges.BadgePosition.topEnd(top: -10, end: -12),
           showBadge: true,
-          badgeContent: BlocBuilder<HomeCubit, HomeState>(
+          badgeContent: BlocBuilder<CartCubit, CartState>(
             builder: (context, state) {
-              return Text(cubit.cartCounter.toString(),
+              return Text(cubit.cartCount.toString(),
                   style: AppTextStyle.font14BoldWhite);
             },
           ),

@@ -1,6 +1,5 @@
 class ProductEntity {
   List<ProductDataEntity>? data;
-
   ProductEntity({this.data});
 }
 
