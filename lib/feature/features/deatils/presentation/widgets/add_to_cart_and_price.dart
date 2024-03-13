@@ -7,16 +7,11 @@ import 'package:slash_task/core/utils/style/app_textstyle.dart';
 import 'package:slash_task/core/utils/widget/add_to_cart_button.dart';
 import 'package:slash_task/feature/features/deatils/presentation/manager/productdetils_cubit.dart';
 
-class AddToCartAndCheckOut extends StatefulWidget {
+class AddToCartAndCheckOut extends StatelessWidget {
   const AddToCartAndCheckOut({super.key, required this.cubit});
 
   final ProductDetailsCubit cubit;
 
-  @override
-  State<AddToCartAndCheckOut> createState() => _AddToCartAndCheckOutState();
-}
-
-class _AddToCartAndCheckOutState extends State<AddToCartAndCheckOut> {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -33,7 +28,7 @@ class _AddToCartAndCheckOutState extends State<AddToCartAndCheckOut> {
             BlocBuilder<ProductDetailsCubit, ProductdetilsState>(
               builder: (context, state) {
                 return Text(
-                  'EGP ${widget.cubit.quantity * (widget.cubit.productDetailsEntity?.data?.variations?[widget.cubit.variationsIndex].price ?? 0)}',
+                  'EGP ${cubit.quantity * (cubit.productDetailsEntity?.data?.variations?[cubit.variationsIndex].price ?? 0)}',
                   style: AppTextStyle.font18BoldBlue.copyWith(
                       color: AppColor.blueDark, fontWeight: FontWeight.w500),
                 );

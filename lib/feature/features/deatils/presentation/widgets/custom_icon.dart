@@ -3,9 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:slash_task/core/utils/color/app_color.dart';
 
 class CustomIcon extends StatelessWidget {
-  const CustomIcon({super.key, this.onTap, required this.icon});
+  const CustomIcon({super.key, this.onTap, required this.icon,  this.size=20});
   final Function()? onTap;
   final IconData icon;
+ final double size;
 
   @override
   Widget build(BuildContext context) {

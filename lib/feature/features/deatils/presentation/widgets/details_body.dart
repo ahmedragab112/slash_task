@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:slash_task/core/extention/extention.dart';
 import 'package:slash_task/core/spaceing/spaceing.dart';
 import 'package:slash_task/core/utils/color/app_color.dart';
+import 'package:slash_task/core/utils/style/app_textstyle.dart';
 import 'package:slash_task/feature/features/deatils/presentation/manager/productdetils_cubit.dart';
 import 'package:slash_task/feature/features/deatils/presentation/widgets/add_to_cart_and_price.dart';
 import 'package:slash_task/feature/features/deatils/presentation/widgets/product_details_body.dart';
@@ -64,8 +65,14 @@ class DetailsBody extends StatelessWidget {
               color: AppColor.blueColor,
             ),
           );
+        } else if (state is GetProductDetailsError) {
+          return Center(
+              child: Text(
+            state.error,
+            style: AppTextStyle.font25BoldBlue,
+          ));
         }
-        return const SizedBox();
+        return const Center();
       },
     ).setPadding(
       context,
@@ -73,209 +80,3 @@ class DetailsBody extends StatelessWidget {
     );
   }
 }
-/* CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: ProductSlider(
-                cubit: cubit,
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: ProductDetailsBody(
-                cubit: cubit,
-              ),
-            ),
-            SliverList.separated(
-              separatorBuilder: (context, index) => const VerticalSpace(8),
-              itemBuilder: (context, index) {
-                cubit.productDetailsEntity?.data?.avaiableProperties?[index]
-                    .property;
-                return AvaiableProperties(
-                  atrpute: cubit.productDetailsEntity?.data
-                          ?.avaiableProperties?[index].property ??
-                      '',
-                  valus: cubit.productDetailsEntity?.data
-                          ?.avaiableProperties?[index].values ??
-                      [],
-                );
-              },
-              itemCount: cubit
-                      .productDetailsEntity?.data?.avaiableProperties?.length ??
-                  0,
-            ),
-            const SliverToBoxAdapter(child: VerticalSpace(48)),
-            SliverToBoxAdapter(
-                child: AddToCartAndCheckOut(
-              cubit: cubit,
-            ))
-          ],
-        ),
-     
- */
-/*  return state.maybeWhen(
-        
-        orElse: () {
-          return Center(
-            child: CircularProgressIndicator(
-              color: AppColor.blueColor,
-            ),
-          );
-        },
-        getProductDetailsLoading: () => Center(
-          child: CircularProgressIndicator(
-            color: AppColor.blueColor,
-          ),
-        ),
-        getProductDetailsSuccess: (productDetailsEntity) => CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: ProductSlider(
-                cubit: cubit,
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: ProductDetailsBody(
-                cubit: cubit,
-              ),
-            ),
-            SliverList.separated(
-              separatorBuilder: (context, index) => const VerticalSpace(8),
-              itemBuilder: (context, index) {
-                cubit.productDetailsEntity?.data?.avaiableProperties?[index]
-                    .property;
-                return AvaiableProperties(
-                  atrpute: cubit.productDetailsEntity?.data
-                          ?.avaiableProperties?[index].property ??
-                      '',
-                  valus: cubit.productDetailsEntity?.data
-                          ?.avaiableProperties?[index].values ??
-                      [],
-                );
-              },
-              itemCount: cubit
-                      .productDetailsEntity?.data?.avaiableProperties?.length ??
-                  0,
-            ),
-            const SliverToBoxAdapter(child: VerticalSpace(48)),
-            SliverToBoxAdapter(
-                child: AddToCartAndCheckOut(
-              cubit: cubit,
-            ))
-          ],
-        ),
-        getProductDetailsError: (error) => Center(
-          child: Text(error),
-        ),
-        chnageSliderIndex: () => CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: ProductSlider(
-                cubit: cubit,
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: ProductDetailsBody(
-                cubit: cubit,
-              ),
-            ),
-            SliverList.separated(
-              separatorBuilder: (context, index) => const VerticalSpace(8),
-              itemBuilder: (context, index) {
-                cubit.productDetailsEntity?.data?.avaiableProperties?[index]
-                    .property;
-                return AvaiableProperties(
-                  atrpute: cubit.productDetailsEntity?.data
-                          ?.avaiableProperties?[index].property ??
-                      '',
-                  valus: cubit.productDetailsEntity?.data
-                          ?.avaiableProperties?[index].values ??
-                      [],
-                );
-              },
-              itemCount: cubit
-                      .productDetailsEntity?.data?.avaiableProperties?.length ??
-                  0,
-            ),
-            const SliverToBoxAdapter(child: VerticalSpace(48)),
-            SliverToBoxAdapter(
-                child: AddToCartAndCheckOut(
-              cubit: cubit,
-            ))
-          ],
-        ),
-        decrement: () => CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: ProductSlider(
-                cubit: cubit,
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: ProductDetailsBody(
-                cubit: cubit,
-              ),
-            ),
-            SliverList.separated(
-              separatorBuilder: (context, index) => const VerticalSpace(8),
-              itemBuilder: (context, index) {
-                cubit.productDetailsEntity?.data?.avaiableProperties?[index]
-                    .property;
-                return AvaiableProperties(
-                  atrpute: cubit.productDetailsEntity?.data
-                          ?.avaiableProperties?[index].property ??
-                      '',
-                  valus: cubit.productDetailsEntity?.data
-                          ?.avaiableProperties?[index].values ??
-                      [],
-                );
-              },
-              itemCount: cubit
-                      .productDetailsEntity?.data?.avaiableProperties?.length ??
-                  0,
-            ),
-            const SliverToBoxAdapter(child: VerticalSpace(48)),
-            SliverToBoxAdapter(
-                child: AddToCartAndCheckOut(
-              cubit: cubit,
-            ))
-          ],
-        ),
-        increment: () => CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: ProductSlider(
-                cubit: cubit,
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: ProductDetailsBody(
-                cubit: cubit,
-              ),
-            ),
-            SliverList.separated(
-              separatorBuilder: (context, index) => const VerticalSpace(8),
-              itemBuilder: (context, index) {
-                cubit.productDetailsEntity?.data?.avaiableProperties?[index]
-                    .property;
-                return AvaiableProperties(
-                  atrpute: cubit.productDetailsEntity?.data
-                          ?.avaiableProperties?[index].property ??
-                      '',
-                  valus: cubit.productDetailsEntity?.data
-                          ?.avaiableProperties?[index].values ??
-                      [],
-                );
-              },
-              itemCount: cubit
-                      .productDetailsEntity?.data?.avaiableProperties?.length ??
-                  0,
-            ),
-            const SliverToBoxAdapter(child: VerticalSpace(48)),
-            SliverToBoxAdapter(
-                child: AddToCartAndCheckOut(
-              cubit: cubit,
-            ))
-          ],
-        ),
-      );
-   */
