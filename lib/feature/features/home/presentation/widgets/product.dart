@@ -17,7 +17,7 @@ class Product extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.pushNamed(AppRoutes.productDetails);
+        context.pushNamed(AppRoutes.productDetails, arguments: data.id);
       },
       child: Container(
           foregroundDecoration: BoxDecoration(

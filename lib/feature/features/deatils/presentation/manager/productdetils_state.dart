@@ -14,4 +14,9 @@ class ProductdetilsState with _$ProductdetilsState {
   const factory ProductdetilsState.getProductDetailsLoading()= GetProductDetailsLoading;
 
 
+const factory ProductdetilsState.changeSliderIndex()= ChangeSliderIndex;
+
+const factory ProductdetilsState.decrement()= Decrement;
+
+const factory ProductdetilsState.increment()= Increment;
 }
