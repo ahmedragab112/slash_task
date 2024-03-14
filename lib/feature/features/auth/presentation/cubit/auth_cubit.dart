@@ -17,11 +17,21 @@ class AuthCubit extends Cubit<AuthState> {
   AuthCubit({required this.authUsecase}) : super(AuthInitial());
   final AuthUsecase authUsecase;
 
- Future<void> signUp() async {
+  Future<void> signUp() async {
     emit(AuthLoading());
     FirbaseResponse<UserCredential> data = await authUsecase.singUp(
         email: singUpEmailController.text,
         password: singUpPasswordController.text);
+    data.when(
+      data: (value) => emit(AuthSuccess()),
+      error: (error) => emit(AuthError(error)),
+    );
+  }
+
+  Future<void> singin() async {
+    emit(AuthLoading());
+    FirbaseResponse<UserCredential> data = await authUsecase.signIn(
+        email: emailController.text, password: passwordController.text);
     data.when(
       data: (value) => emit(AuthSuccess()),
       error: (error) => emit(AuthError(error)),

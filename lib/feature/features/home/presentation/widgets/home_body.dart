@@ -25,7 +25,7 @@ class HomeBody extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  AppStrings.splash,
+                  AppStrings.slash,
                   style: AppTextStyle.font25BoldBlue,
                 ),
                 const Spacer(),
@@ -55,7 +55,8 @@ class HomeBody extends StatelessWidget {
                       itemBuilder: (context, index) => Product(
                             data: data.data![index],
                           )),
-                  failed: (error) => SliverToBoxAdapter(child: Center(child: Text(error))),
+                  failed: (error) =>
+                      SliverToBoxAdapter(child: Center(child: Text(error))),
                   orElse: () => const SliverToBoxAdapter());
             },
           ),

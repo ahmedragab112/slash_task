@@ -22,7 +22,7 @@ class Slash extends StatelessWidget {
           darkTheme: AppTheme.darkTheme,
           themeMode: ThemeMode.dark,
           onGenerateRoute: AppRouter.onGenerateRoute,
-          initialRoute: AppRoutes.homeProducts,
+          initialRoute: AppRoutes.login,
         ),
       ),
     );

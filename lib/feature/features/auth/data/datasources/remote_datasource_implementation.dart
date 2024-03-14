@@ -8,6 +8,12 @@ class AuthRemoteDataSourceImplementation implements AuthRemoteDataSource {
   @override
   Future<UserCredential> signUp(
       {required String email, required String password}) {
-        return fireBaseManger.signUp(email: email, password: password);
-      }
+    return fireBaseManger.signUp(email: email, password: password);
+  }
+
+  @override
+  Future<UserCredential> signIn(
+      {required String email, required String password}) {
+    return fireBaseManger.signIn(email: email, password: password);
+  }
 }

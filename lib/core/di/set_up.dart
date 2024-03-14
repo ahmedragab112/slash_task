@@ -1,7 +1,15 @@
 import 'package:dio/dio.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
 import 'package:slash_task/core/api/dio_singlton.dart';
 import 'package:slash_task/core/api/web_service.dart';
+import 'package:slash_task/core/firebase/firebase_manger.dart';
+import 'package:slash_task/feature/features/auth/data/datasources/remote_data_source.dart';
+import 'package:slash_task/feature/features/auth/data/datasources/remote_datasource_implementation.dart';
+import 'package:slash_task/feature/features/auth/data/repositories/auth_repo_implementation.dart';
+import 'package:slash_task/feature/features/auth/domain/repositories/auth_repo.dart';
+import 'package:slash_task/feature/features/auth/domain/usecases/auth_usecase.dart';
+import 'package:slash_task/feature/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:slash_task/feature/features/deatils/data/datasources/details_data_soucre_implementation.dart';
 import 'package:slash_task/feature/features/deatils/data/datasources/details_data_source.dart';
 import 'package:slash_task/feature/features/deatils/data/repositories/details_repo_implementation.dart';
@@ -34,18 +42,39 @@ void setupLocator() {
         useCase: getIt<HomeUseCase>(),
       ));
 
-      //______________________________________________________________________________
+  //______________________________________________________________________________
 
- getIt.registerLazySingleton<DetailsDataSource>(() =>
-    DetailsDataSourceImplementation(apiManager: getIt<ApiManager>()));
+  getIt.registerLazySingleton<DetailsDataSource>(
+      () => DetailsDataSourceImplementation(apiManager: getIt<ApiManager>()));
 
-getIt.registerLazySingleton<DeatilsRepo>(() =>
-    DeatilsRepoImplementation(detailsDataSource: getIt<DetailsDataSource>()));
+  getIt.registerLazySingleton<DeatilsRepo>(() =>
+      DeatilsRepoImplementation(detailsDataSource: getIt<DetailsDataSource>()));
 
-getIt.registerLazySingleton<DetailsUseCase>(() =>
-    DetailsUseCase(repo: getIt<DeatilsRepo>()));
+  getIt.registerLazySingleton<DetailsUseCase>(
+      () => DetailsUseCase(repo: getIt<DeatilsRepo>()));
 
-getIt.registerFactory<ProductDetailsCubit>(() =>
-    ProductDetailsCubit(useCase: getIt<DetailsUseCase>()));
+  getIt.registerFactory<ProductDetailsCubit>(
+      () => ProductDetailsCubit(useCase: getIt<DetailsUseCase>()));
 
+//_________________________________________________________________
+
+  getIt.registerLazySingleton<FireBaseManger>(
+      () => FireBaseManger(firebaseAuth: FirebaseAuth.instance));
+
+  getIt.registerLazySingleton<AuthRemoteDataSource>(() =>
+      AuthRemoteDataSourceImplementation(
+          fireBaseManger: getIt<FireBaseManger>()));
+
+  getIt.registerLazySingleton<AuthRepo>(() => AuthRepoImplementation(
+      authRemoteDataSource: getIt<AuthRemoteDataSource>()));
+
+  getIt.registerLazySingleton<AuthUsecase>(() => AuthUsecase(
+        authRepo: getIt<AuthRepo>(),
+      ));
+
+  getIt.registerFactory<AuthCubit>(() => AuthCubit(
+        authUsecase: getIt<AuthUsecase>(),
+      ));
+
+      
 }

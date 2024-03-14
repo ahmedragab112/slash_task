@@ -10,12 +10,27 @@ class AuthRepoImplementation implements AuthRepo {
   Future<FirbaseResponse<UserCredential>> signUp(
       {required String email, required String password}) async {
     try {
-      var data =await authRemoteDataSource.signUp(email: email, password: password);
-      return  FirbaseResponse.data(data);
+      var data =
+          await authRemoteDataSource.signUp(email: email, password: password);
+      return FirbaseResponse.data(data);
     } on FirebaseAuthException catch (e) {
-      return FirbaseResponse.error(error:e.message!);
-    }catch (e){
-      return FirbaseResponse.error(error:e.toString());
+      return FirbaseResponse.error(error: e.message!);
+    } catch (e) {
+      return FirbaseResponse.error(error: e.toString());
+    }
+  }
+
+  @override
+  Future<FirbaseResponse<UserCredential>> singIn(
+      {required String email, required String password}) async {
+    try {
+      var data =
+          await authRemoteDataSource.signIn(email: email, password: password);
+      return FirbaseResponse.data(data);
+    } on FirebaseAuthException catch (e) {
+      return FirbaseResponse.error(error: e.message!);
+    } catch (e) {
+      return FirbaseResponse.error(error: e.toString());
     }
   }
 }

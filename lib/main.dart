@@ -7,10 +7,11 @@ import 'package:slash_task/core/service/observer.dart';
 import 'package:slash_task/firebase_options.dart';
 
 void main() async {
-  setupLocator();
+ WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+   setupLocator();
   Bloc.observer = MyBlocObserver();
   runApp(const Slash());
 }

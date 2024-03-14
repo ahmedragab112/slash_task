@@ -14,4 +14,8 @@ class FireBaseManger {
 
 
   Future<UserCredential> signIn({required String email, required String password}) async => firebaseAuth.signInWithEmailAndPassword(email: email, password: password);
+
+
+
+
 }
