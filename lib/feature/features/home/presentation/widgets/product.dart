@@ -74,7 +74,7 @@ class Product extends StatelessWidget {
                           size: 15.w,
                         ),
                         const Spacer(),
-                        const AddToFavourite()
+                         AddToFavourite(entity:data ,)
                       ],
                     )
                   ],
