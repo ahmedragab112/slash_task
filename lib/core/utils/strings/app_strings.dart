@@ -1,4 +1,5 @@
 class AppStrings {
+  
   static const String slash = "Slash";
   static const String productDetails = "Product Details";
   static const String description = "Description";

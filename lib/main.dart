@@ -11,7 +11,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-   setupLocator();
+  setupLocator();
   Bloc.observer = MyBlocObserver();
   runApp(const Slash());
 }

@@ -5,7 +5,7 @@ import 'package:slash_task/core/spaceing/spaceing.dart';
 import 'package:slash_task/core/utils/color/app_color.dart';
 import 'package:slash_task/core/utils/style/app_textstyle.dart';
 import 'package:slash_task/core/utils/widget/custom_network_image.dart';
-import 'package:slash_task/feature/features/cart/data/models/cart_model.dart';
+import 'package:slash_task/feature/features/cart/models/cart_model.dart';
 import 'package:slash_task/feature/features/deatils/presentation/widgets/custom_color.dart';
 import 'package:slash_task/feature/features/deatils/presentation/widgets/custom_icon.dart';
 
@@ -16,7 +16,7 @@ class ProductCartIteam extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 115.h,
+      constraints: BoxConstraints(maxHeight: 300.h),
       foregroundDecoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.r),
         border: Border.all(color: AppColor.blueColorWithOpacity30, width: 1),
@@ -50,21 +50,20 @@ class ProductCartIteam extends StatelessWidget {
                       style: AppTextStyle.font18BoldBlue
                           .copyWith(color: AppColor.blueDark),
                     ),
-                    Row(
-                      children: [
-                        CustomColorWidget(
-                          colorValue: (carte.color ?? 0000).toString(),
-                          width: 15.w,
-                          height: 15.h,
-                        ),
-                        const HorizantelSpace(8),
-                        Text(
-                          '${carte.color ?? ''} | ${carte.productSize ?? ''}',
-                          style: AppTextStyle.font14RegularDarkBlue.copyWith(
-                            color: AppColor.blueDark.withOpacity(.60),
-                          ),
-                        ),
-                      ],
+                    VerticalSpace(
+                      20, 
+                      child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) => ColorAndSize(
+                                color: carte.productPropertiesValues?[index]
+                                        .property ??
+                                    '',
+                                size: carte.productPropertiesValues?[index]
+                                        .value ??
+                                    '',
+                              ),
+                          itemCount:
+                              carte.productPropertiesValues?.length ?? 0),
                     ),
                     Row(
                       children: [
@@ -121,6 +120,32 @@ class ProductCartIteam extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+}
+
+class ColorAndSize extends StatelessWidget {
+  const ColorAndSize({super.key, required this.color, required this.size});
+  final String? color;
+  final String? size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        CustomColorWidget(
+          colorValue: (color ?? 0000).toString(),
+          width: 15.w,
+          height: 15.h,
+        ),
+        const HorizantelSpace(8),
+        Text(
+          '${color ?? ''} | ${size ?? ''}',
+          style: AppTextStyle.font14RegularDarkBlue.copyWith(
+            color: AppColor.blueDark.withOpacity(.60),
+          ),
+        ),
+      ],
     );
   }
 }

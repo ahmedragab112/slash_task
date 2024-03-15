@@ -75,6 +75,4 @@ void setupLocator() {
   getIt.registerFactory<AuthCubit>(() => AuthCubit(
         authUsecase: getIt<AuthUsecase>(),
       ));
-
-      
 }
