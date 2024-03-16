@@ -1,5 +1,4 @@
-import 'dart:developer';
-
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -17,21 +16,15 @@ class AddToFavourite extends StatelessWidget {
     var cubit = context.read<CartCubit>();
     return GestureDetector(
       onTap: () {
-        var iteam = FavouriteModel(
+        cubit.addFavourite(FavouriteModel(
             quntity: entity.productVariations?[0].quantity,
             rating: entity.productRating,
             id: entity.id,
             image:
                 entity.productVariations![0].productVarientImages![0].imagePath,
             price: (entity.productVariations?[0].price ?? 0).toString(),
-            productName: entity.name);
-
-        if (cubit.favouriteList.contains(iteam) == true) {
-          log('not add ');
-        } else {
-          cubit.addFavourite(iteam);
-          log('add');
-        }
+            productName: entity.name,
+            userId: FirebaseAuth.instance.currentUser?.uid));
       },
       child: Container(
           width: 30.w,

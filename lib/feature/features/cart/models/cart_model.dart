@@ -14,9 +14,7 @@ class CartModel {
       {required this.quantity,
       required this.id,
       required this.productName,
-      
       required this.price,
       this.productImage,
-      
       this.productPropertiesValues});
 }

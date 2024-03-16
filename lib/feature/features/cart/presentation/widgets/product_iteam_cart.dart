@@ -16,7 +16,7 @@ class ProductCartIteam extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      constraints: BoxConstraints(maxHeight: 300.h),
+      constraints: BoxConstraints(maxHeight: 120.h),
       foregroundDecoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.r),
         border: Border.all(color: AppColor.blueColorWithOpacity30, width: 1),
@@ -50,8 +50,9 @@ class ProductCartIteam extends StatelessWidget {
                       style: AppTextStyle.font18BoldBlue
                           .copyWith(color: AppColor.blueDark),
                     ),
-                    VerticalSpace(
-                      20, 
+                    SizedBox(
+                      width: 100,
+                      height: 30,
                       child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index) => ColorAndSize(
@@ -65,18 +66,14 @@ class ProductCartIteam extends StatelessWidget {
                           itemCount:
                               carte.productPropertiesValues?.length ?? 0),
                     ),
-                    Row(
-                      children: [
-                        Text(
-                          '${carte.price} EGP',
-                          style: AppTextStyle.font18BoldBlue
-                              .copyWith(color: AppColor.blueDark),
-                        ),
-                      ],
+                    Text(
+                      '${carte.price} EGP',
+                      style: AppTextStyle.font18BoldBlue
+                          .copyWith(color: AppColor.blueDark),
                     )
                   ],
                 ),
-                const HorizantelSpace(8),
+                const HorizantelSpace(10),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,

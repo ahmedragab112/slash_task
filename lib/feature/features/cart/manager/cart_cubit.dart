@@ -10,11 +10,12 @@ part 'cart_cubit.freezed.dart';
 class CartCubit extends Cubit<CartState> {
   List<ProductDetailsEntity> cartData = [];
   List<FavouriteModel> favouriteList = [];
-  
-  int totalPrice = 0;
+
+  num totalPrice = 0;
   DetailsUseCase useCase;
 
   int cartCount = 0;
+  int favouriteCount = 0;
 
   CartCubit({required this.useCase}) : super(const CartState.initial());
 
@@ -23,7 +24,15 @@ class CartCubit extends Cubit<CartState> {
     var data = await useCase.getProductDetails(id: productId);
     data.when(
       data: (data) {
+        for (var i = 0; i < cartData.length; i++) {
+          if (cartData[i].data!.id == data.data!.id) {
+            return;
+          }
+        }
+        cartCount++;
         cartData.add(data);
+        totalPrice += data.data?.variations?[0].price ?? 0;
+
         emit(const CartState.addToCart());
       },
       error: (errorHandler) {
@@ -38,6 +47,13 @@ class CartCubit extends Cubit<CartState> {
 
   void addFavourite(FavouriteModel model) {
     emit(const CartState.initial());
+
+    for (var i = 0; i < favouriteList.length; i++) {
+      if (favouriteList[i].id == model.id) {
+        return;
+      }
+    }
+    favouriteCount++;
     favouriteList.add(model);
     emit(const CartState.addToFavourite());
   }

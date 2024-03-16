@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:slash_task/config/router/routes.dart';
-import 'package:slash_task/core/extention/extention.dart';
 import 'package:slash_task/feature/features/cart/manager/cart_cubit.dart';
 
 import '../../../../../core/utils/color/app_color.dart';
@@ -17,9 +15,6 @@ class AddToCartIcon extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         cubit.addProductToCart(productId: productId);
-        context.pushNamed(
-          AppRoutes.addToCart,
-        );
       },
       child: Container(
           width: 30.w,

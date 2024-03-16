@@ -23,19 +23,31 @@ class Home extends StatelessWidget {
           style: AppTextStyle.font25BoldBlue,
         ),
         actions: [
-          CustomBadge(
-            icon: Icons.shopping_cart,
-            count: cubit.cartCount.toString(),
-            function: () {
-              context.pushNamed(AppRoutes.addToCart);
+          BlocBuilder<CartCubit, CartState>(
+            builder: (context, state) {
+              return BlocBuilder<CartCubit, CartState>(
+                builder: (context, state) {
+                  return CustomBadge(
+                    icon: Icons.shopping_cart,
+                    count: cubit.cartCount.toString(),
+                    function: () {
+                      context.pushNamed(AppRoutes.addToCart);
+                    },
+                  );
+                },
+              );
             },
           ),
           const HorizantelSpace(20),
-          CustomBadge(
-            icon: Icons.favorite,
-            count: cubit.cartCount.toString(),
-            function: () {
-              context.pushNamed(AppRoutes.favourite);
+          BlocBuilder<CartCubit, CartState>(
+            builder: (context, state) {
+              return CustomBadge(
+                icon: Icons.favorite,
+                count: cubit.favouriteCount.toString(),
+                function: () {
+                  context.pushNamed(AppRoutes.favourite);
+                },
+              );
             },
           ),
           const HorizantelSpace(20),

@@ -19,75 +19,97 @@ class CartView extends StatelessWidget {
     var cubit = context.read<CartCubit>();
     return Scaffold(
       body: NestedScrollView(
-          headerSliverBuilder: (context, innerBoxIsScrolled) => [
-                SliverAppBar(
-                  title: Text(AppStrings.cart,
-                      style: AppTextStyle.font20MeduimDarkBlue),
-                  actions: [
-                    Image.asset(
-                      'assets/images/shopping_cart.png',
-                      width: 27.w,
-                      height: 27.h,
-                    ),
-                    const HorizantelSpace(15),
-                  ],
-                )
-              ],
-          body: CustomScrollView(
-            physics: const BouncingScrollPhysics(),
-            slivers: [
-              SliverList.separated(
-                itemBuilder: (context, index) => ProductCartIteam(
-                    carte: CartModel(
-                        quantity: cubit.cartData[index].data?.variations?[0]
-                                .quantity ??
-                            0,
-                        id: cubit.cartData[index].data!.id!,
-                        productName: cubit.cartData[index].data!.name!,
-                        price:
-                            cubit.cartData[index].data!.variations?[0].price ??
-                                0,
-                        productPropertiesValues: cubit.cartData[index].data!
-                                .variations?[0].productPropertiesValues ??
-                            [],
-                        productImage: cubit.cartData[index].data!.variations?[0]
-                                .productVarientImages?[0].imagePath ??
-                            '')),
-                separatorBuilder: (context, index) => const VerticalSpace(10),
-                itemCount: cubit.cartData.length,
+        headerSliverBuilder: (context, innerBoxIsScrolled) => [
+          SliverAppBar(
+            title:
+                Text(AppStrings.cart, style: AppTextStyle.font20MeduimDarkBlue),
+            actions: [
+              Image.asset(
+                'assets/images/shopping_cart.png',
+                width: 27.w,
+                height: 27.h,
               ),
-              const SliverToBoxAdapter(child: VerticalSpace(50)),
-              SliverToBoxAdapter(
-                child: Row(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Total price ',
-                          style: AppTextStyle.font18BoldBlue
-                              .copyWith(color: AppColor.blueColorWithOpacity60),
-                        ),
+              const HorizantelSpace(15),
+            ],
+          )
+        ],
+        body: Column(
+          children: [
+            Expanded(
+              child: CustomScrollView(
+                physics: const BouncingScrollPhysics(),
+                slivers: [
+                  SliverList.separated(
+                    itemBuilder: (context, index) =>
+                        BlocBuilder<CartCubit, CartState>(
+                      builder: (context, state) {
+                        return ProductCartIteam(
+                            carte: CartModel(
+                                quantity: cubit.cartData[index].data
+                                        ?.variations?[0].quantity ??
+                                    0,
+                                id: cubit.cartData[index].data!.id!,
+                                productName: cubit.cartData[index].data!.name!,
+                                price: cubit.cartData[index].data!
+                                        .variations?[0].price ??
+                                    0,
+                                productPropertiesValues: cubit
+                                        .cartData[index]
+                                        .data!
+                                        .variations?[0]
+                                        .productPropertiesValues ??
+                                    [],
+                                productImage: cubit
+                                        .cartData[index]
+                                        .data!
+                                        .variations?[0]
+                                        .productVarientImages?[0]
+                                        .imagePath ??
+                                    ''));
+                      },
+                    ),
+                    separatorBuilder: (context, index) =>
                         const VerticalSpace(10),
-                        Text(
-                          'EGP 35000',
+                    itemCount: cubit.cartData.length,
+                  ),
+                  const SliverToBoxAdapter(child: VerticalSpace(50)),
+                ],
+              ),
+            ),
+            Row(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Total price ',
+                      style: AppTextStyle.font18BoldBlue
+                          .copyWith(color: AppColor.blueColorWithOpacity60),
+                    ),
+                    const VerticalSpace(10),
+                    BlocBuilder<CartCubit, CartState>(
+                      builder: (context, state) {
+                        return Text(
+                          cubit.totalPrice.toString(),
                           style: AppTextStyle.font18BoldBlue.copyWith(
                               color: AppColor.blueDark,
                               fontWeight: FontWeight.w500),
-                        )
-                      ],
-                    ),
-                    const HorizantelSpace(30),
-                    const Expanded(
-                        child: AddToCartButton(
-                      text: 'Check Out',
-                      icon: Icons.arrow_right_alt_rounded,
-                    )),
+                        );
+                      },
+                    )
                   ],
                 ),
-              )
-            ],
-          ).setPadding(context, horizontal: 16, vertical: 28)),
+                const HorizantelSpace(30),
+                const Expanded(
+                    child: AddToCartButton(
+                  text: 'Check Out',
+                  icon: Icons.arrow_right_alt_rounded,
+                )),
+              ],
+            ),
+          ],
+        ).setPadding(context, horizontal: 16, vertical: 28),
+      ),
     );
   }
 }

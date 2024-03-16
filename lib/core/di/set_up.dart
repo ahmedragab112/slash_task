@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
@@ -59,7 +60,7 @@ void setupLocator() {
 //_________________________________________________________________
 
   getIt.registerLazySingleton<FireBaseManger>(
-      () => FireBaseManger(firebaseAuth: FirebaseAuth.instance));
+      () => FireBaseManger(firebaseAuth: FirebaseAuth.instance, firebaseFirestore: FirebaseFirestore.instance));
 
   getIt.registerLazySingleton<AuthRemoteDataSource>(() =>
       AuthRemoteDataSourceImplementation(

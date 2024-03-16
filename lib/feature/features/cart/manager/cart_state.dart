@@ -12,6 +12,8 @@ class CartState with _$CartState {
   const factory CartState.getTotalPrice() = GetTotalPrice;
   const factory CartState.decrement() = Decrement;
   const factory CartState.addToFavourite() = FavouriteAdded;
+
+ 
   const factory CartState.removeFavourite() = FavouriteRemoved;
   
 }
