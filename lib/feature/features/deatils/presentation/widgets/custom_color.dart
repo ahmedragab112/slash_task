@@ -23,7 +23,7 @@ class CustomColorWidget extends StatelessWidget {
       decoration: BoxDecoration(
           border: Border.all(color: AppColor.blueColor, width: 1),
           shape: BoxShape.circle,
-          color: Color(int.parse('0xff${colorValue.replaceAll('#', '')}'))),
+          color: Color(int.parse('0xff000000'))),
     );
   }
 }

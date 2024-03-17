@@ -3,15 +3,22 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:slash_task/core/di/set_up.dart';
 import 'package:slash_task/core/utils/constant/app_constant.dart';
 import 'package:slash_task/config/router/routes.dart';
+import 'package:slash_task/feature/features/auth/presentation/cubit/auth_cubit.dart';
+import 'package:slash_task/feature/features/auth/presentation/pages/login.dart';
+import 'package:slash_task/feature/features/auth/presentation/pages/sign_up.dart';
 import 'package:slash_task/feature/features/cart/presentation/pages/cart_view.dart';
 import 'package:slash_task/feature/features/deatils/presentation/manager/productdetils_cubit.dart';
 import 'package:slash_task/feature/features/deatils/presentation/pages/product_details.dart';
+import 'package:slash_task/feature/features/cart/presentation/pages/favourite.dart';
 import 'package:slash_task/feature/features/home/presentation/manager/home_cubit.dart';
 import 'package:slash_task/feature/features/home/presentation/pages/home.dart';
 
 class AppRouter {
   static Route<Widget>? onGenerateRoute(RouteSettings settings) {
-    final int id = settings.arguments as int? ?? 0;
+    int id = 0;
+    if (settings.arguments is int) {
+      id = settings.arguments as int;
+    }
     switch (settings.name) {
       case AppRoutes.homeProducts:
         return PageRouteBuilder(
@@ -47,6 +54,43 @@ class AppRouter {
         return PageRouteBuilder(
           settings: settings,
           pageBuilder: (_, animation, __) => const CartView(),
+          transitionDuration: AppConstant.krouteingAnimationDuration,
+          transitionsBuilder: (_, animation, __, child) => ScaleTransition(
+            scale: animation,
+            child: child,
+          ),
+        );
+
+      case AppRoutes.favourite:
+        return PageRouteBuilder(
+          settings: settings,
+          pageBuilder: (_, animation, __) => const Favourite(),
+          transitionDuration: AppConstant.krouteingAnimationDuration,
+          transitionsBuilder: (_, animation, __, child) => ScaleTransition(
+            scale: animation,
+            child: child,
+          ),
+        );
+      case AppRoutes.login:
+        return PageRouteBuilder(
+          settings: settings,
+          pageBuilder: (_, animation, __) => BlocProvider(
+            create: (context) => getIt<AuthCubit>(),
+            child: const Login(),
+          ),
+          transitionDuration: AppConstant.krouteingAnimationDuration,
+          transitionsBuilder: (_, animation, __, child) => ScaleTransition(
+            scale: animation,
+            child: child,
+          ),
+        );
+      case AppRoutes.signUp:
+        return PageRouteBuilder(
+          settings: settings,
+          pageBuilder: (_, animation, __) => BlocProvider(
+            create: (context) => getIt<AuthCubit>(),
+            child: const SingUp(),
+          ),
           transitionDuration: AppConstant.krouteingAnimationDuration,
           transitionsBuilder: (_, animation, __, child) => ScaleTransition(
             scale: animation,

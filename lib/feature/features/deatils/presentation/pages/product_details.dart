@@ -11,20 +11,21 @@ class ProductDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton.outlined(
-            onPressed: () => Navigator.pop(context),
-            icon: const Icon(Icons.arrow_back)),
-        title: const Text(AppStrings.productDetails),
-        actions: [
-          Icon(
-            Icons.shopping_cart_outlined,
-            size: 30.sp,
-          ),
-          const HorizantelSpace(16),
-        ],
-      ),
-      body: const DetailsBody(),
-    );
+        body: NestedScrollView(
+            headerSliverBuilder: (context, innerBoxIsScrolled) => [
+                  SliverAppBar(
+                      leading: IconButton.outlined(
+                          onPressed: () => Navigator.pop(context),
+                          icon: const Icon(Icons.arrow_back)),
+                      title: const Text(AppStrings.productDetails),
+                      actions: [
+                        Icon(
+                          Icons.shopping_cart_outlined,
+                          size: 30.sp,
+                        ),
+                        const HorizantelSpace(16),
+                      ]),
+                ],
+            body: const DetailsBody()));
   }
 }
