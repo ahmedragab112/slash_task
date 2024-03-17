@@ -7,7 +7,8 @@ import 'package:slash_task/core/utils/color/app_color.dart';
 import 'package:slash_task/core/utils/style/app_textstyle.dart';
 import 'package:slash_task/core/utils/widget/custom_network_image.dart';
 import 'package:slash_task/feature/features/home/domain/entities/product_entity.dart';
-import 'package:slash_task/feature/features/home/presentation/widgets/add_to_cart_button.dart';
+import 'package:slash_task/feature/features/home/presentation/widgets/add_to_favourite_button.dart';
+import 'package:slash_task/feature/features/home/presentation/widgets/add_to_cart_icon.dart';
 import 'package:slash_task/feature/features/home/presentation/widgets/price_and_quantity.dart';
 
 class Product extends StatelessWidget {
@@ -74,7 +75,11 @@ class Product extends StatelessWidget {
                           size: 15.w,
                         ),
                         const Spacer(),
-                        const AddToFavourite()
+                        AddToFavourite(
+                          entity: data,
+                        ),
+                        const HorizantelSpace(8),
+                        AddToCartIcon(productId: data.id!)
                       ],
                     )
                   ],

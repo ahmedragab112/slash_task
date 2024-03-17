@@ -25,6 +25,8 @@ mixin _$CartState {
     required TResult Function() increment,
     required TResult Function() getTotalPrice,
     required TResult Function() decrement,
+    required TResult Function() addToFavourite,
+    required TResult Function() removeFavourite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +38,8 @@ mixin _$CartState {
     TResult? Function()? increment,
     TResult? Function()? getTotalPrice,
     TResult? Function()? decrement,
+    TResult? Function()? addToFavourite,
+    TResult? Function()? removeFavourite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +51,8 @@ mixin _$CartState {
     TResult Function()? increment,
     TResult Function()? getTotalPrice,
     TResult Function()? decrement,
+    TResult Function()? addToFavourite,
+    TResult Function()? removeFavourite,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -59,6 +65,8 @@ mixin _$CartState {
     required TResult Function(Increment value) increment,
     required TResult Function(GetTotalPrice value) getTotalPrice,
     required TResult Function(Decrement value) decrement,
+    required TResult Function(FavouriteAdded value) addToFavourite,
+    required TResult Function(FavouriteRemoved value) removeFavourite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +78,8 @@ mixin _$CartState {
     TResult? Function(Increment value)? increment,
     TResult? Function(GetTotalPrice value)? getTotalPrice,
     TResult? Function(Decrement value)? decrement,
+    TResult? Function(FavouriteAdded value)? addToFavourite,
+    TResult? Function(FavouriteRemoved value)? removeFavourite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,6 +91,8 @@ mixin _$CartState {
     TResult Function(Increment value)? increment,
     TResult Function(GetTotalPrice value)? getTotalPrice,
     TResult Function(Decrement value)? decrement,
+    TResult Function(FavouriteAdded value)? addToFavourite,
+    TResult Function(FavouriteRemoved value)? removeFavourite,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -148,6 +160,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function() increment,
     required TResult Function() getTotalPrice,
     required TResult Function() decrement,
+    required TResult Function() addToFavourite,
+    required TResult Function() removeFavourite,
   }) {
     return initial();
   }
@@ -162,6 +176,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? increment,
     TResult? Function()? getTotalPrice,
     TResult? Function()? decrement,
+    TResult? Function()? addToFavourite,
+    TResult? Function()? removeFavourite,
   }) {
     return initial?.call();
   }
@@ -176,6 +192,8 @@ class _$InitialImpl implements _Initial {
     TResult Function()? increment,
     TResult Function()? getTotalPrice,
     TResult Function()? decrement,
+    TResult Function()? addToFavourite,
+    TResult Function()? removeFavourite,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -194,6 +212,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(Increment value) increment,
     required TResult Function(GetTotalPrice value) getTotalPrice,
     required TResult Function(Decrement value) decrement,
+    required TResult Function(FavouriteAdded value) addToFavourite,
+    required TResult Function(FavouriteRemoved value) removeFavourite,
   }) {
     return initial(this);
   }
@@ -208,6 +228,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(Increment value)? increment,
     TResult? Function(GetTotalPrice value)? getTotalPrice,
     TResult? Function(Decrement value)? decrement,
+    TResult? Function(FavouriteAdded value)? addToFavourite,
+    TResult? Function(FavouriteRemoved value)? removeFavourite,
   }) {
     return initial?.call(this);
   }
@@ -222,6 +244,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(Increment value)? increment,
     TResult Function(GetTotalPrice value)? getTotalPrice,
     TResult Function(Decrement value)? decrement,
+    TResult Function(FavouriteAdded value)? addToFavourite,
+    TResult Function(FavouriteRemoved value)? removeFavourite,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -280,6 +304,8 @@ class _$LoadingImpl implements Loading {
     required TResult Function() increment,
     required TResult Function() getTotalPrice,
     required TResult Function() decrement,
+    required TResult Function() addToFavourite,
+    required TResult Function() removeFavourite,
   }) {
     return loading();
   }
@@ -294,6 +320,8 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? increment,
     TResult? Function()? getTotalPrice,
     TResult? Function()? decrement,
+    TResult? Function()? addToFavourite,
+    TResult? Function()? removeFavourite,
   }) {
     return loading?.call();
   }
@@ -308,6 +336,8 @@ class _$LoadingImpl implements Loading {
     TResult Function()? increment,
     TResult Function()? getTotalPrice,
     TResult Function()? decrement,
+    TResult Function()? addToFavourite,
+    TResult Function()? removeFavourite,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -326,6 +356,8 @@ class _$LoadingImpl implements Loading {
     required TResult Function(Increment value) increment,
     required TResult Function(GetTotalPrice value) getTotalPrice,
     required TResult Function(Decrement value) decrement,
+    required TResult Function(FavouriteAdded value) addToFavourite,
+    required TResult Function(FavouriteRemoved value) removeFavourite,
   }) {
     return loading(this);
   }
@@ -340,6 +372,8 @@ class _$LoadingImpl implements Loading {
     TResult? Function(Increment value)? increment,
     TResult? Function(GetTotalPrice value)? getTotalPrice,
     TResult? Function(Decrement value)? decrement,
+    TResult? Function(FavouriteAdded value)? addToFavourite,
+    TResult? Function(FavouriteRemoved value)? removeFavourite,
   }) {
     return loading?.call(this);
   }
@@ -354,6 +388,8 @@ class _$LoadingImpl implements Loading {
     TResult Function(Increment value)? increment,
     TResult Function(GetTotalPrice value)? getTotalPrice,
     TResult Function(Decrement value)? decrement,
+    TResult Function(FavouriteAdded value)? addToFavourite,
+    TResult Function(FavouriteRemoved value)? removeFavourite,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -412,6 +448,8 @@ class _$AddToCartImpl implements AddToCart {
     required TResult Function() increment,
     required TResult Function() getTotalPrice,
     required TResult Function() decrement,
+    required TResult Function() addToFavourite,
+    required TResult Function() removeFavourite,
   }) {
     return addToCart();
   }
@@ -426,6 +464,8 @@ class _$AddToCartImpl implements AddToCart {
     TResult? Function()? increment,
     TResult? Function()? getTotalPrice,
     TResult? Function()? decrement,
+    TResult? Function()? addToFavourite,
+    TResult? Function()? removeFavourite,
   }) {
     return addToCart?.call();
   }
@@ -440,6 +480,8 @@ class _$AddToCartImpl implements AddToCart {
     TResult Function()? increment,
     TResult Function()? getTotalPrice,
     TResult Function()? decrement,
+    TResult Function()? addToFavourite,
+    TResult Function()? removeFavourite,
     required TResult orElse(),
   }) {
     if (addToCart != null) {
@@ -458,6 +500,8 @@ class _$AddToCartImpl implements AddToCart {
     required TResult Function(Increment value) increment,
     required TResult Function(GetTotalPrice value) getTotalPrice,
     required TResult Function(Decrement value) decrement,
+    required TResult Function(FavouriteAdded value) addToFavourite,
+    required TResult Function(FavouriteRemoved value) removeFavourite,
   }) {
     return addToCart(this);
   }
@@ -472,6 +516,8 @@ class _$AddToCartImpl implements AddToCart {
     TResult? Function(Increment value)? increment,
     TResult? Function(GetTotalPrice value)? getTotalPrice,
     TResult? Function(Decrement value)? decrement,
+    TResult? Function(FavouriteAdded value)? addToFavourite,
+    TResult? Function(FavouriteRemoved value)? removeFavourite,
   }) {
     return addToCart?.call(this);
   }
@@ -486,6 +532,8 @@ class _$AddToCartImpl implements AddToCart {
     TResult Function(Increment value)? increment,
     TResult Function(GetTotalPrice value)? getTotalPrice,
     TResult Function(Decrement value)? decrement,
+    TResult Function(FavouriteAdded value)? addToFavourite,
+    TResult Function(FavouriteRemoved value)? removeFavourite,
     required TResult orElse(),
   }) {
     if (addToCart != null) {
@@ -570,6 +618,8 @@ class _$ErrorImpl implements Error {
     required TResult Function() increment,
     required TResult Function() getTotalPrice,
     required TResult Function() decrement,
+    required TResult Function() addToFavourite,
+    required TResult Function() removeFavourite,
   }) {
     return error(message);
   }
@@ -584,6 +634,8 @@ class _$ErrorImpl implements Error {
     TResult? Function()? increment,
     TResult? Function()? getTotalPrice,
     TResult? Function()? decrement,
+    TResult? Function()? addToFavourite,
+    TResult? Function()? removeFavourite,
   }) {
     return error?.call(message);
   }
@@ -598,6 +650,8 @@ class _$ErrorImpl implements Error {
     TResult Function()? increment,
     TResult Function()? getTotalPrice,
     TResult Function()? decrement,
+    TResult Function()? addToFavourite,
+    TResult Function()? removeFavourite,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -616,6 +670,8 @@ class _$ErrorImpl implements Error {
     required TResult Function(Increment value) increment,
     required TResult Function(GetTotalPrice value) getTotalPrice,
     required TResult Function(Decrement value) decrement,
+    required TResult Function(FavouriteAdded value) addToFavourite,
+    required TResult Function(FavouriteRemoved value) removeFavourite,
   }) {
     return error(this);
   }
@@ -630,6 +686,8 @@ class _$ErrorImpl implements Error {
     TResult? Function(Increment value)? increment,
     TResult? Function(GetTotalPrice value)? getTotalPrice,
     TResult? Function(Decrement value)? decrement,
+    TResult? Function(FavouriteAdded value)? addToFavourite,
+    TResult? Function(FavouriteRemoved value)? removeFavourite,
   }) {
     return error?.call(this);
   }
@@ -644,6 +702,8 @@ class _$ErrorImpl implements Error {
     TResult Function(Increment value)? increment,
     TResult Function(GetTotalPrice value)? getTotalPrice,
     TResult Function(Decrement value)? decrement,
+    TResult Function(FavouriteAdded value)? addToFavourite,
+    TResult Function(FavouriteRemoved value)? removeFavourite,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -707,6 +767,8 @@ class _$IncrementImpl implements Increment {
     required TResult Function() increment,
     required TResult Function() getTotalPrice,
     required TResult Function() decrement,
+    required TResult Function() addToFavourite,
+    required TResult Function() removeFavourite,
   }) {
     return increment();
   }
@@ -721,6 +783,8 @@ class _$IncrementImpl implements Increment {
     TResult? Function()? increment,
     TResult? Function()? getTotalPrice,
     TResult? Function()? decrement,
+    TResult? Function()? addToFavourite,
+    TResult? Function()? removeFavourite,
   }) {
     return increment?.call();
   }
@@ -735,6 +799,8 @@ class _$IncrementImpl implements Increment {
     TResult Function()? increment,
     TResult Function()? getTotalPrice,
     TResult Function()? decrement,
+    TResult Function()? addToFavourite,
+    TResult Function()? removeFavourite,
     required TResult orElse(),
   }) {
     if (increment != null) {
@@ -753,6 +819,8 @@ class _$IncrementImpl implements Increment {
     required TResult Function(Increment value) increment,
     required TResult Function(GetTotalPrice value) getTotalPrice,
     required TResult Function(Decrement value) decrement,
+    required TResult Function(FavouriteAdded value) addToFavourite,
+    required TResult Function(FavouriteRemoved value) removeFavourite,
   }) {
     return increment(this);
   }
@@ -767,6 +835,8 @@ class _$IncrementImpl implements Increment {
     TResult? Function(Increment value)? increment,
     TResult? Function(GetTotalPrice value)? getTotalPrice,
     TResult? Function(Decrement value)? decrement,
+    TResult? Function(FavouriteAdded value)? addToFavourite,
+    TResult? Function(FavouriteRemoved value)? removeFavourite,
   }) {
     return increment?.call(this);
   }
@@ -781,6 +851,8 @@ class _$IncrementImpl implements Increment {
     TResult Function(Increment value)? increment,
     TResult Function(GetTotalPrice value)? getTotalPrice,
     TResult Function(Decrement value)? decrement,
+    TResult Function(FavouriteAdded value)? addToFavourite,
+    TResult Function(FavouriteRemoved value)? removeFavourite,
     required TResult orElse(),
   }) {
     if (increment != null) {
@@ -839,6 +911,8 @@ class _$GetTotalPriceImpl implements GetTotalPrice {
     required TResult Function() increment,
     required TResult Function() getTotalPrice,
     required TResult Function() decrement,
+    required TResult Function() addToFavourite,
+    required TResult Function() removeFavourite,
   }) {
     return getTotalPrice();
   }
@@ -853,6 +927,8 @@ class _$GetTotalPriceImpl implements GetTotalPrice {
     TResult? Function()? increment,
     TResult? Function()? getTotalPrice,
     TResult? Function()? decrement,
+    TResult? Function()? addToFavourite,
+    TResult? Function()? removeFavourite,
   }) {
     return getTotalPrice?.call();
   }
@@ -867,6 +943,8 @@ class _$GetTotalPriceImpl implements GetTotalPrice {
     TResult Function()? increment,
     TResult Function()? getTotalPrice,
     TResult Function()? decrement,
+    TResult Function()? addToFavourite,
+    TResult Function()? removeFavourite,
     required TResult orElse(),
   }) {
     if (getTotalPrice != null) {
@@ -885,6 +963,8 @@ class _$GetTotalPriceImpl implements GetTotalPrice {
     required TResult Function(Increment value) increment,
     required TResult Function(GetTotalPrice value) getTotalPrice,
     required TResult Function(Decrement value) decrement,
+    required TResult Function(FavouriteAdded value) addToFavourite,
+    required TResult Function(FavouriteRemoved value) removeFavourite,
   }) {
     return getTotalPrice(this);
   }
@@ -899,6 +979,8 @@ class _$GetTotalPriceImpl implements GetTotalPrice {
     TResult? Function(Increment value)? increment,
     TResult? Function(GetTotalPrice value)? getTotalPrice,
     TResult? Function(Decrement value)? decrement,
+    TResult? Function(FavouriteAdded value)? addToFavourite,
+    TResult? Function(FavouriteRemoved value)? removeFavourite,
   }) {
     return getTotalPrice?.call(this);
   }
@@ -913,6 +995,8 @@ class _$GetTotalPriceImpl implements GetTotalPrice {
     TResult Function(Increment value)? increment,
     TResult Function(GetTotalPrice value)? getTotalPrice,
     TResult Function(Decrement value)? decrement,
+    TResult Function(FavouriteAdded value)? addToFavourite,
+    TResult Function(FavouriteRemoved value)? removeFavourite,
     required TResult orElse(),
   }) {
     if (getTotalPrice != null) {
@@ -971,6 +1055,8 @@ class _$DecrementImpl implements Decrement {
     required TResult Function() increment,
     required TResult Function() getTotalPrice,
     required TResult Function() decrement,
+    required TResult Function() addToFavourite,
+    required TResult Function() removeFavourite,
   }) {
     return decrement();
   }
@@ -985,6 +1071,8 @@ class _$DecrementImpl implements Decrement {
     TResult? Function()? increment,
     TResult? Function()? getTotalPrice,
     TResult? Function()? decrement,
+    TResult? Function()? addToFavourite,
+    TResult? Function()? removeFavourite,
   }) {
     return decrement?.call();
   }
@@ -999,6 +1087,8 @@ class _$DecrementImpl implements Decrement {
     TResult Function()? increment,
     TResult Function()? getTotalPrice,
     TResult Function()? decrement,
+    TResult Function()? addToFavourite,
+    TResult Function()? removeFavourite,
     required TResult orElse(),
   }) {
     if (decrement != null) {
@@ -1017,6 +1107,8 @@ class _$DecrementImpl implements Decrement {
     required TResult Function(Increment value) increment,
     required TResult Function(GetTotalPrice value) getTotalPrice,
     required TResult Function(Decrement value) decrement,
+    required TResult Function(FavouriteAdded value) addToFavourite,
+    required TResult Function(FavouriteRemoved value) removeFavourite,
   }) {
     return decrement(this);
   }
@@ -1031,6 +1123,8 @@ class _$DecrementImpl implements Decrement {
     TResult? Function(Increment value)? increment,
     TResult? Function(GetTotalPrice value)? getTotalPrice,
     TResult? Function(Decrement value)? decrement,
+    TResult? Function(FavouriteAdded value)? addToFavourite,
+    TResult? Function(FavouriteRemoved value)? removeFavourite,
   }) {
     return decrement?.call(this);
   }
@@ -1045,6 +1139,8 @@ class _$DecrementImpl implements Decrement {
     TResult Function(Increment value)? increment,
     TResult Function(GetTotalPrice value)? getTotalPrice,
     TResult Function(Decrement value)? decrement,
+    TResult Function(FavouriteAdded value)? addToFavourite,
+    TResult Function(FavouriteRemoved value)? removeFavourite,
     required TResult orElse(),
   }) {
     if (decrement != null) {
@@ -1056,4 +1152,292 @@ class _$DecrementImpl implements Decrement {
 
 abstract class Decrement implements CartState {
   const factory Decrement() = _$DecrementImpl;
+}
+
+/// @nodoc
+abstract class _$$FavouriteAddedImplCopyWith<$Res> {
+  factory _$$FavouriteAddedImplCopyWith(_$FavouriteAddedImpl value,
+          $Res Function(_$FavouriteAddedImpl) then) =
+      __$$FavouriteAddedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FavouriteAddedImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$FavouriteAddedImpl>
+    implements _$$FavouriteAddedImplCopyWith<$Res> {
+  __$$FavouriteAddedImplCopyWithImpl(
+      _$FavouriteAddedImpl _value, $Res Function(_$FavouriteAddedImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$FavouriteAddedImpl implements FavouriteAdded {
+  const _$FavouriteAddedImpl();
+
+  @override
+  String toString() {
+    return 'CartState.addToFavourite()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$FavouriteAddedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() addToCart,
+    required TResult Function(String message) error,
+    required TResult Function() increment,
+    required TResult Function() getTotalPrice,
+    required TResult Function() decrement,
+    required TResult Function() addToFavourite,
+    required TResult Function() removeFavourite,
+  }) {
+    return addToFavourite();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? addToCart,
+    TResult? Function(String message)? error,
+    TResult? Function()? increment,
+    TResult? Function()? getTotalPrice,
+    TResult? Function()? decrement,
+    TResult? Function()? addToFavourite,
+    TResult? Function()? removeFavourite,
+  }) {
+    return addToFavourite?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? addToCart,
+    TResult Function(String message)? error,
+    TResult Function()? increment,
+    TResult Function()? getTotalPrice,
+    TResult Function()? decrement,
+    TResult Function()? addToFavourite,
+    TResult Function()? removeFavourite,
+    required TResult orElse(),
+  }) {
+    if (addToFavourite != null) {
+      return addToFavourite();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(AddToCart value) addToCart,
+    required TResult Function(Error value) error,
+    required TResult Function(Increment value) increment,
+    required TResult Function(GetTotalPrice value) getTotalPrice,
+    required TResult Function(Decrement value) decrement,
+    required TResult Function(FavouriteAdded value) addToFavourite,
+    required TResult Function(FavouriteRemoved value) removeFavourite,
+  }) {
+    return addToFavourite(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(AddToCart value)? addToCart,
+    TResult? Function(Error value)? error,
+    TResult? Function(Increment value)? increment,
+    TResult? Function(GetTotalPrice value)? getTotalPrice,
+    TResult? Function(Decrement value)? decrement,
+    TResult? Function(FavouriteAdded value)? addToFavourite,
+    TResult? Function(FavouriteRemoved value)? removeFavourite,
+  }) {
+    return addToFavourite?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(AddToCart value)? addToCart,
+    TResult Function(Error value)? error,
+    TResult Function(Increment value)? increment,
+    TResult Function(GetTotalPrice value)? getTotalPrice,
+    TResult Function(Decrement value)? decrement,
+    TResult Function(FavouriteAdded value)? addToFavourite,
+    TResult Function(FavouriteRemoved value)? removeFavourite,
+    required TResult orElse(),
+  }) {
+    if (addToFavourite != null) {
+      return addToFavourite(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FavouriteAdded implements CartState {
+  const factory FavouriteAdded() = _$FavouriteAddedImpl;
+}
+
+/// @nodoc
+abstract class _$$FavouriteRemovedImplCopyWith<$Res> {
+  factory _$$FavouriteRemovedImplCopyWith(_$FavouriteRemovedImpl value,
+          $Res Function(_$FavouriteRemovedImpl) then) =
+      __$$FavouriteRemovedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FavouriteRemovedImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$FavouriteRemovedImpl>
+    implements _$$FavouriteRemovedImplCopyWith<$Res> {
+  __$$FavouriteRemovedImplCopyWithImpl(_$FavouriteRemovedImpl _value,
+      $Res Function(_$FavouriteRemovedImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$FavouriteRemovedImpl implements FavouriteRemoved {
+  const _$FavouriteRemovedImpl();
+
+  @override
+  String toString() {
+    return 'CartState.removeFavourite()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$FavouriteRemovedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() addToCart,
+    required TResult Function(String message) error,
+    required TResult Function() increment,
+    required TResult Function() getTotalPrice,
+    required TResult Function() decrement,
+    required TResult Function() addToFavourite,
+    required TResult Function() removeFavourite,
+  }) {
+    return removeFavourite();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? addToCart,
+    TResult? Function(String message)? error,
+    TResult? Function()? increment,
+    TResult? Function()? getTotalPrice,
+    TResult? Function()? decrement,
+    TResult? Function()? addToFavourite,
+    TResult? Function()? removeFavourite,
+  }) {
+    return removeFavourite?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? addToCart,
+    TResult Function(String message)? error,
+    TResult Function()? increment,
+    TResult Function()? getTotalPrice,
+    TResult Function()? decrement,
+    TResult Function()? addToFavourite,
+    TResult Function()? removeFavourite,
+    required TResult orElse(),
+  }) {
+    if (removeFavourite != null) {
+      return removeFavourite();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(AddToCart value) addToCart,
+    required TResult Function(Error value) error,
+    required TResult Function(Increment value) increment,
+    required TResult Function(GetTotalPrice value) getTotalPrice,
+    required TResult Function(Decrement value) decrement,
+    required TResult Function(FavouriteAdded value) addToFavourite,
+    required TResult Function(FavouriteRemoved value) removeFavourite,
+  }) {
+    return removeFavourite(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(AddToCart value)? addToCart,
+    TResult? Function(Error value)? error,
+    TResult? Function(Increment value)? increment,
+    TResult? Function(GetTotalPrice value)? getTotalPrice,
+    TResult? Function(Decrement value)? decrement,
+    TResult? Function(FavouriteAdded value)? addToFavourite,
+    TResult? Function(FavouriteRemoved value)? removeFavourite,
+  }) {
+    return removeFavourite?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(AddToCart value)? addToCart,
+    TResult Function(Error value)? error,
+    TResult Function(Increment value)? increment,
+    TResult Function(GetTotalPrice value)? getTotalPrice,
+    TResult Function(Decrement value)? decrement,
+    TResult Function(FavouriteAdded value)? addToFavourite,
+    TResult Function(FavouriteRemoved value)? removeFavourite,
+    required TResult orElse(),
+  }) {
+    if (removeFavourite != null) {
+      return removeFavourite(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FavouriteRemoved implements CartState {
+  const factory FavouriteRemoved() = _$FavouriteRemovedImpl;
 }
