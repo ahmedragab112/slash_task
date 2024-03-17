@@ -17,7 +17,7 @@ class AnOtherProductsFromTheSameVariations extends StatelessWidget {
 
   final int index;
   final VariationsEntity variationsEntity;
-  final ProductdetilsCubit cubit;
+  final ProductDetailsCubit cubit;
 
   @override
   Widget build(BuildContext context) {
@@ -51,30 +51,3 @@ class AnOtherProductsFromTheSameVariations extends StatelessWidget {
                 : []));
   }
 }
-
-/* imagePath: cubit
-                      .productDetailsEntity
-                      ?.data
-                      ?.variations?[cubit.variationsIndex]
-                      .productVarientImages
-                      ?.last
-                      .imagePath ??
-                  'https://img.freepik.com/free-vector/no-data-concept-illustration_114360-2506.jpg?size=626&ext=jpg',
-            */
-            /*
-            GestureDetector(
-      onTap: () {
-        context.pushReplacementNamed(AppRoutes.productDetails,
-            arguments: cubit.productDetailsEntity!.data!.id);
-      },
-      child: Container(
-        constraints: BoxConstraints(minWidth: 50.w, minHeight: 50.h),
-        foregroundDecoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15.r),
-            border: Border.all(color: AppColor.blueColor, width: 2)),
-        child: ClipRRect(
-            borderRadius: BorderRadius.circular(15.r),
-            child: CustomNetWorkImage(
-                imagePath: imagePath, width: 80.w, height: 80.h)),
-      ),
-    );*/

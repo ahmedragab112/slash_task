@@ -37,7 +37,7 @@ class SliderItem extends StatelessWidget {
           ),
           Positioned(
             bottom: 4,
-            child: BlocBuilder<ProductdetilsCubit, ProductdetilsState>(
+            child: BlocBuilder<ProductDetailsCubit, ProductdetilsState>(
               builder: (context, state) {
                 return AnimatedSmoothIndicator(
                   count: length,

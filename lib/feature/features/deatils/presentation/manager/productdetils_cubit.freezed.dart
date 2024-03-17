@@ -23,9 +23,9 @@ mixin _$ProductdetilsState {
         getProductDetailsSuccess,
     required TResult Function(String error) getProductDetailsError,
     required TResult Function() getProductDetailsLoading,
-    required TResult Function() chnageSliderIndex,
-    required TResult Function() increment,
+    required TResult Function() changeSliderIndex,
     required TResult Function() decrement,
+    required TResult Function() increment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,9 +35,9 @@ mixin _$ProductdetilsState {
         getProductDetailsSuccess,
     TResult? Function(String error)? getProductDetailsError,
     TResult? Function()? getProductDetailsLoading,
-    TResult? Function()? chnageSliderIndex,
-    TResult? Function()? increment,
+    TResult? Function()? changeSliderIndex,
     TResult? Function()? decrement,
+    TResult? Function()? increment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,9 +47,9 @@ mixin _$ProductdetilsState {
         getProductDetailsSuccess,
     TResult Function(String error)? getProductDetailsError,
     TResult Function()? getProductDetailsLoading,
-    TResult Function()? chnageSliderIndex,
-    TResult Function()? increment,
+    TResult Function()? changeSliderIndex,
     TResult Function()? decrement,
+    TResult Function()? increment,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -62,9 +62,9 @@ mixin _$ProductdetilsState {
         getProductDetailsError,
     required TResult Function(GetProductDetailsLoading value)
         getProductDetailsLoading,
-    required TResult Function(ChangeSliderIndex value) chnageSliderIndex,
-    required TResult Function(Increment value) increment,
+    required TResult Function(ChangeSliderIndex value) changeSliderIndex,
     required TResult Function(Decrement value) decrement,
+    required TResult Function(Increment value) increment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -73,9 +73,9 @@ mixin _$ProductdetilsState {
     TResult? Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
     TResult? Function(GetProductDetailsError value)? getProductDetailsError,
     TResult? Function(GetProductDetailsLoading value)? getProductDetailsLoading,
-    TResult? Function(ChangeSliderIndex value)? chnageSliderIndex,
-    TResult? Function(Increment value)? increment,
+    TResult? Function(ChangeSliderIndex value)? changeSliderIndex,
     TResult? Function(Decrement value)? decrement,
+    TResult? Function(Increment value)? increment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -84,9 +84,9 @@ mixin _$ProductdetilsState {
     TResult Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
     TResult Function(GetProductDetailsError value)? getProductDetailsError,
     TResult Function(GetProductDetailsLoading value)? getProductDetailsLoading,
-    TResult Function(ChangeSliderIndex value)? chnageSliderIndex,
-    TResult Function(Increment value)? increment,
+    TResult Function(ChangeSliderIndex value)? changeSliderIndex,
     TResult Function(Decrement value)? decrement,
+    TResult Function(Increment value)? increment,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -153,9 +153,9 @@ class _$InitialImpl implements _Initial {
         getProductDetailsSuccess,
     required TResult Function(String error) getProductDetailsError,
     required TResult Function() getProductDetailsLoading,
-    required TResult Function() chnageSliderIndex,
-    required TResult Function() increment,
+    required TResult Function() changeSliderIndex,
     required TResult Function() decrement,
+    required TResult Function() increment,
   }) {
     return initial();
   }
@@ -168,9 +168,9 @@ class _$InitialImpl implements _Initial {
         getProductDetailsSuccess,
     TResult? Function(String error)? getProductDetailsError,
     TResult? Function()? getProductDetailsLoading,
-    TResult? Function()? chnageSliderIndex,
-    TResult? Function()? increment,
+    TResult? Function()? changeSliderIndex,
     TResult? Function()? decrement,
+    TResult? Function()? increment,
   }) {
     return initial?.call();
   }
@@ -183,9 +183,9 @@ class _$InitialImpl implements _Initial {
         getProductDetailsSuccess,
     TResult Function(String error)? getProductDetailsError,
     TResult Function()? getProductDetailsLoading,
-    TResult Function()? chnageSliderIndex,
-    TResult Function()? increment,
+    TResult Function()? changeSliderIndex,
     TResult Function()? decrement,
+    TResult Function()? increment,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -204,9 +204,9 @@ class _$InitialImpl implements _Initial {
         getProductDetailsError,
     required TResult Function(GetProductDetailsLoading value)
         getProductDetailsLoading,
-    required TResult Function(ChangeSliderIndex value) chnageSliderIndex,
-    required TResult Function(Increment value) increment,
+    required TResult Function(ChangeSliderIndex value) changeSliderIndex,
     required TResult Function(Decrement value) decrement,
+    required TResult Function(Increment value) increment,
   }) {
     return initial(this);
   }
@@ -218,9 +218,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
     TResult? Function(GetProductDetailsError value)? getProductDetailsError,
     TResult? Function(GetProductDetailsLoading value)? getProductDetailsLoading,
-    TResult? Function(ChangeSliderIndex value)? chnageSliderIndex,
-    TResult? Function(Increment value)? increment,
+    TResult? Function(ChangeSliderIndex value)? changeSliderIndex,
     TResult? Function(Decrement value)? decrement,
+    TResult? Function(Increment value)? increment,
   }) {
     return initial?.call(this);
   }
@@ -232,9 +232,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
     TResult Function(GetProductDetailsError value)? getProductDetailsError,
     TResult Function(GetProductDetailsLoading value)? getProductDetailsLoading,
-    TResult Function(ChangeSliderIndex value)? chnageSliderIndex,
-    TResult Function(Increment value)? increment,
+    TResult Function(ChangeSliderIndex value)? changeSliderIndex,
     TResult Function(Decrement value)? decrement,
+    TResult Function(Increment value)? increment,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -322,9 +322,9 @@ class _$GetProductDetailsSuccessImpl implements GetProductDetailsSuccess {
         getProductDetailsSuccess,
     required TResult Function(String error) getProductDetailsError,
     required TResult Function() getProductDetailsLoading,
-    required TResult Function() chnageSliderIndex,
-    required TResult Function() increment,
+    required TResult Function() changeSliderIndex,
     required TResult Function() decrement,
+    required TResult Function() increment,
   }) {
     return getProductDetailsSuccess(productDetailsEntity);
   }
@@ -337,9 +337,9 @@ class _$GetProductDetailsSuccessImpl implements GetProductDetailsSuccess {
         getProductDetailsSuccess,
     TResult? Function(String error)? getProductDetailsError,
     TResult? Function()? getProductDetailsLoading,
-    TResult? Function()? chnageSliderIndex,
-    TResult? Function()? increment,
+    TResult? Function()? changeSliderIndex,
     TResult? Function()? decrement,
+    TResult? Function()? increment,
   }) {
     return getProductDetailsSuccess?.call(productDetailsEntity);
   }
@@ -352,9 +352,9 @@ class _$GetProductDetailsSuccessImpl implements GetProductDetailsSuccess {
         getProductDetailsSuccess,
     TResult Function(String error)? getProductDetailsError,
     TResult Function()? getProductDetailsLoading,
-    TResult Function()? chnageSliderIndex,
-    TResult Function()? increment,
+    TResult Function()? changeSliderIndex,
     TResult Function()? decrement,
+    TResult Function()? increment,
     required TResult orElse(),
   }) {
     if (getProductDetailsSuccess != null) {
@@ -373,9 +373,9 @@ class _$GetProductDetailsSuccessImpl implements GetProductDetailsSuccess {
         getProductDetailsError,
     required TResult Function(GetProductDetailsLoading value)
         getProductDetailsLoading,
-    required TResult Function(ChangeSliderIndex value) chnageSliderIndex,
-    required TResult Function(Increment value) increment,
+    required TResult Function(ChangeSliderIndex value) changeSliderIndex,
     required TResult Function(Decrement value) decrement,
+    required TResult Function(Increment value) increment,
   }) {
     return getProductDetailsSuccess(this);
   }
@@ -387,9 +387,9 @@ class _$GetProductDetailsSuccessImpl implements GetProductDetailsSuccess {
     TResult? Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
     TResult? Function(GetProductDetailsError value)? getProductDetailsError,
     TResult? Function(GetProductDetailsLoading value)? getProductDetailsLoading,
-    TResult? Function(ChangeSliderIndex value)? chnageSliderIndex,
-    TResult? Function(Increment value)? increment,
+    TResult? Function(ChangeSliderIndex value)? changeSliderIndex,
     TResult? Function(Decrement value)? decrement,
+    TResult? Function(Increment value)? increment,
   }) {
     return getProductDetailsSuccess?.call(this);
   }
@@ -401,9 +401,9 @@ class _$GetProductDetailsSuccessImpl implements GetProductDetailsSuccess {
     TResult Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
     TResult Function(GetProductDetailsError value)? getProductDetailsError,
     TResult Function(GetProductDetailsLoading value)? getProductDetailsLoading,
-    TResult Function(ChangeSliderIndex value)? chnageSliderIndex,
-    TResult Function(Increment value)? increment,
+    TResult Function(ChangeSliderIndex value)? changeSliderIndex,
     TResult Function(Decrement value)? decrement,
+    TResult Function(Increment value)? increment,
     required TResult orElse(),
   }) {
     if (getProductDetailsSuccess != null) {
@@ -496,9 +496,9 @@ class _$GetProductDetailsErrorImpl implements GetProductDetailsError {
         getProductDetailsSuccess,
     required TResult Function(String error) getProductDetailsError,
     required TResult Function() getProductDetailsLoading,
-    required TResult Function() chnageSliderIndex,
-    required TResult Function() increment,
+    required TResult Function() changeSliderIndex,
     required TResult Function() decrement,
+    required TResult Function() increment,
   }) {
     return getProductDetailsError(error);
   }
@@ -511,9 +511,9 @@ class _$GetProductDetailsErrorImpl implements GetProductDetailsError {
         getProductDetailsSuccess,
     TResult? Function(String error)? getProductDetailsError,
     TResult? Function()? getProductDetailsLoading,
-    TResult? Function()? chnageSliderIndex,
-    TResult? Function()? increment,
+    TResult? Function()? changeSliderIndex,
     TResult? Function()? decrement,
+    TResult? Function()? increment,
   }) {
     return getProductDetailsError?.call(error);
   }
@@ -526,9 +526,9 @@ class _$GetProductDetailsErrorImpl implements GetProductDetailsError {
         getProductDetailsSuccess,
     TResult Function(String error)? getProductDetailsError,
     TResult Function()? getProductDetailsLoading,
-    TResult Function()? chnageSliderIndex,
-    TResult Function()? increment,
+    TResult Function()? changeSliderIndex,
     TResult Function()? decrement,
+    TResult Function()? increment,
     required TResult orElse(),
   }) {
     if (getProductDetailsError != null) {
@@ -547,9 +547,9 @@ class _$GetProductDetailsErrorImpl implements GetProductDetailsError {
         getProductDetailsError,
     required TResult Function(GetProductDetailsLoading value)
         getProductDetailsLoading,
-    required TResult Function(ChangeSliderIndex value) chnageSliderIndex,
-    required TResult Function(Increment value) increment,
+    required TResult Function(ChangeSliderIndex value) changeSliderIndex,
     required TResult Function(Decrement value) decrement,
+    required TResult Function(Increment value) increment,
   }) {
     return getProductDetailsError(this);
   }
@@ -561,9 +561,9 @@ class _$GetProductDetailsErrorImpl implements GetProductDetailsError {
     TResult? Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
     TResult? Function(GetProductDetailsError value)? getProductDetailsError,
     TResult? Function(GetProductDetailsLoading value)? getProductDetailsLoading,
-    TResult? Function(ChangeSliderIndex value)? chnageSliderIndex,
-    TResult? Function(Increment value)? increment,
+    TResult? Function(ChangeSliderIndex value)? changeSliderIndex,
     TResult? Function(Decrement value)? decrement,
+    TResult? Function(Increment value)? increment,
   }) {
     return getProductDetailsError?.call(this);
   }
@@ -575,9 +575,9 @@ class _$GetProductDetailsErrorImpl implements GetProductDetailsError {
     TResult Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
     TResult Function(GetProductDetailsError value)? getProductDetailsError,
     TResult Function(GetProductDetailsLoading value)? getProductDetailsLoading,
-    TResult Function(ChangeSliderIndex value)? chnageSliderIndex,
-    TResult Function(Increment value)? increment,
+    TResult Function(ChangeSliderIndex value)? changeSliderIndex,
     TResult Function(Decrement value)? decrement,
+    TResult Function(Increment value)? increment,
     required TResult orElse(),
   }) {
     if (getProductDetailsError != null) {
@@ -644,9 +644,9 @@ class _$GetProductDetailsLoadingImpl implements GetProductDetailsLoading {
         getProductDetailsSuccess,
     required TResult Function(String error) getProductDetailsError,
     required TResult Function() getProductDetailsLoading,
-    required TResult Function() chnageSliderIndex,
-    required TResult Function() increment,
+    required TResult Function() changeSliderIndex,
     required TResult Function() decrement,
+    required TResult Function() increment,
   }) {
     return getProductDetailsLoading();
   }
@@ -659,9 +659,9 @@ class _$GetProductDetailsLoadingImpl implements GetProductDetailsLoading {
         getProductDetailsSuccess,
     TResult? Function(String error)? getProductDetailsError,
     TResult? Function()? getProductDetailsLoading,
-    TResult? Function()? chnageSliderIndex,
-    TResult? Function()? increment,
+    TResult? Function()? changeSliderIndex,
     TResult? Function()? decrement,
+    TResult? Function()? increment,
   }) {
     return getProductDetailsLoading?.call();
   }
@@ -674,9 +674,9 @@ class _$GetProductDetailsLoadingImpl implements GetProductDetailsLoading {
         getProductDetailsSuccess,
     TResult Function(String error)? getProductDetailsError,
     TResult Function()? getProductDetailsLoading,
-    TResult Function()? chnageSliderIndex,
-    TResult Function()? increment,
+    TResult Function()? changeSliderIndex,
     TResult Function()? decrement,
+    TResult Function()? increment,
     required TResult orElse(),
   }) {
     if (getProductDetailsLoading != null) {
@@ -695,9 +695,9 @@ class _$GetProductDetailsLoadingImpl implements GetProductDetailsLoading {
         getProductDetailsError,
     required TResult Function(GetProductDetailsLoading value)
         getProductDetailsLoading,
-    required TResult Function(ChangeSliderIndex value) chnageSliderIndex,
-    required TResult Function(Increment value) increment,
+    required TResult Function(ChangeSliderIndex value) changeSliderIndex,
     required TResult Function(Decrement value) decrement,
+    required TResult Function(Increment value) increment,
   }) {
     return getProductDetailsLoading(this);
   }
@@ -709,9 +709,9 @@ class _$GetProductDetailsLoadingImpl implements GetProductDetailsLoading {
     TResult? Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
     TResult? Function(GetProductDetailsError value)? getProductDetailsError,
     TResult? Function(GetProductDetailsLoading value)? getProductDetailsLoading,
-    TResult? Function(ChangeSliderIndex value)? chnageSliderIndex,
-    TResult? Function(Increment value)? increment,
+    TResult? Function(ChangeSliderIndex value)? changeSliderIndex,
     TResult? Function(Decrement value)? decrement,
+    TResult? Function(Increment value)? increment,
   }) {
     return getProductDetailsLoading?.call(this);
   }
@@ -723,9 +723,9 @@ class _$GetProductDetailsLoadingImpl implements GetProductDetailsLoading {
     TResult Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
     TResult Function(GetProductDetailsError value)? getProductDetailsError,
     TResult Function(GetProductDetailsLoading value)? getProductDetailsLoading,
-    TResult Function(ChangeSliderIndex value)? chnageSliderIndex,
-    TResult Function(Increment value)? increment,
+    TResult Function(ChangeSliderIndex value)? changeSliderIndex,
     TResult Function(Decrement value)? decrement,
+    TResult Function(Increment value)? increment,
     required TResult orElse(),
   }) {
     if (getProductDetailsLoading != null) {
@@ -762,7 +762,7 @@ class _$ChangeSliderIndexImpl implements ChangeSliderIndex {
 
   @override
   String toString() {
-    return 'ProductdetilsState.chnageSliderIndex()';
+    return 'ProductdetilsState.changeSliderIndex()';
   }
 
   @override
@@ -782,11 +782,11 @@ class _$ChangeSliderIndexImpl implements ChangeSliderIndex {
         getProductDetailsSuccess,
     required TResult Function(String error) getProductDetailsError,
     required TResult Function() getProductDetailsLoading,
-    required TResult Function() chnageSliderIndex,
-    required TResult Function() increment,
+    required TResult Function() changeSliderIndex,
     required TResult Function() decrement,
+    required TResult Function() increment,
   }) {
-    return chnageSliderIndex();
+    return changeSliderIndex();
   }
 
   @override
@@ -797,11 +797,11 @@ class _$ChangeSliderIndexImpl implements ChangeSliderIndex {
         getProductDetailsSuccess,
     TResult? Function(String error)? getProductDetailsError,
     TResult? Function()? getProductDetailsLoading,
-    TResult? Function()? chnageSliderIndex,
-    TResult? Function()? increment,
+    TResult? Function()? changeSliderIndex,
     TResult? Function()? decrement,
+    TResult? Function()? increment,
   }) {
-    return chnageSliderIndex?.call();
+    return changeSliderIndex?.call();
   }
 
   @override
@@ -812,13 +812,13 @@ class _$ChangeSliderIndexImpl implements ChangeSliderIndex {
         getProductDetailsSuccess,
     TResult Function(String error)? getProductDetailsError,
     TResult Function()? getProductDetailsLoading,
-    TResult Function()? chnageSliderIndex,
-    TResult Function()? increment,
+    TResult Function()? changeSliderIndex,
     TResult Function()? decrement,
+    TResult Function()? increment,
     required TResult orElse(),
   }) {
-    if (chnageSliderIndex != null) {
-      return chnageSliderIndex();
+    if (changeSliderIndex != null) {
+      return changeSliderIndex();
     }
     return orElse();
   }
@@ -833,11 +833,11 @@ class _$ChangeSliderIndexImpl implements ChangeSliderIndex {
         getProductDetailsError,
     required TResult Function(GetProductDetailsLoading value)
         getProductDetailsLoading,
-    required TResult Function(ChangeSliderIndex value) chnageSliderIndex,
-    required TResult Function(Increment value) increment,
+    required TResult Function(ChangeSliderIndex value) changeSliderIndex,
     required TResult Function(Decrement value) decrement,
+    required TResult Function(Increment value) increment,
   }) {
-    return chnageSliderIndex(this);
+    return changeSliderIndex(this);
   }
 
   @override
@@ -847,11 +847,11 @@ class _$ChangeSliderIndexImpl implements ChangeSliderIndex {
     TResult? Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
     TResult? Function(GetProductDetailsError value)? getProductDetailsError,
     TResult? Function(GetProductDetailsLoading value)? getProductDetailsLoading,
-    TResult? Function(ChangeSliderIndex value)? chnageSliderIndex,
-    TResult? Function(Increment value)? increment,
+    TResult? Function(ChangeSliderIndex value)? changeSliderIndex,
     TResult? Function(Decrement value)? decrement,
+    TResult? Function(Increment value)? increment,
   }) {
-    return chnageSliderIndex?.call(this);
+    return changeSliderIndex?.call(this);
   }
 
   @override
@@ -861,13 +861,13 @@ class _$ChangeSliderIndexImpl implements ChangeSliderIndex {
     TResult Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
     TResult Function(GetProductDetailsError value)? getProductDetailsError,
     TResult Function(GetProductDetailsLoading value)? getProductDetailsLoading,
-    TResult Function(ChangeSliderIndex value)? chnageSliderIndex,
-    TResult Function(Increment value)? increment,
+    TResult Function(ChangeSliderIndex value)? changeSliderIndex,
     TResult Function(Decrement value)? decrement,
+    TResult Function(Increment value)? increment,
     required TResult orElse(),
   }) {
-    if (chnageSliderIndex != null) {
-      return chnageSliderIndex(this);
+    if (changeSliderIndex != null) {
+      return changeSliderIndex(this);
     }
     return orElse();
   }
@@ -875,144 +875,6 @@ class _$ChangeSliderIndexImpl implements ChangeSliderIndex {
 
 abstract class ChangeSliderIndex implements ProductdetilsState {
   const factory ChangeSliderIndex() = _$ChangeSliderIndexImpl;
-}
-
-/// @nodoc
-abstract class _$$IncrementImplCopyWith<$Res> {
-  factory _$$IncrementImplCopyWith(
-          _$IncrementImpl value, $Res Function(_$IncrementImpl) then) =
-      __$$IncrementImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$IncrementImplCopyWithImpl<$Res>
-    extends _$ProductdetilsStateCopyWithImpl<$Res, _$IncrementImpl>
-    implements _$$IncrementImplCopyWith<$Res> {
-  __$$IncrementImplCopyWithImpl(
-      _$IncrementImpl _value, $Res Function(_$IncrementImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$IncrementImpl implements Increment {
-  const _$IncrementImpl();
-
-  @override
-  String toString() {
-    return 'ProductdetilsState.increment()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$IncrementImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(ProductDetailsEntity productDetailsEntity)
-        getProductDetailsSuccess,
-    required TResult Function(String error) getProductDetailsError,
-    required TResult Function() getProductDetailsLoading,
-    required TResult Function() chnageSliderIndex,
-    required TResult Function() increment,
-    required TResult Function() decrement,
-  }) {
-    return increment();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(ProductDetailsEntity productDetailsEntity)?
-        getProductDetailsSuccess,
-    TResult? Function(String error)? getProductDetailsError,
-    TResult? Function()? getProductDetailsLoading,
-    TResult? Function()? chnageSliderIndex,
-    TResult? Function()? increment,
-    TResult? Function()? decrement,
-  }) {
-    return increment?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(ProductDetailsEntity productDetailsEntity)?
-        getProductDetailsSuccess,
-    TResult Function(String error)? getProductDetailsError,
-    TResult Function()? getProductDetailsLoading,
-    TResult Function()? chnageSliderIndex,
-    TResult Function()? increment,
-    TResult Function()? decrement,
-    required TResult orElse(),
-  }) {
-    if (increment != null) {
-      return increment();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(GetProductDetailsSuccess value)
-        getProductDetailsSuccess,
-    required TResult Function(GetProductDetailsError value)
-        getProductDetailsError,
-    required TResult Function(GetProductDetailsLoading value)
-        getProductDetailsLoading,
-    required TResult Function(ChangeSliderIndex value) chnageSliderIndex,
-    required TResult Function(Increment value) increment,
-    required TResult Function(Decrement value) decrement,
-  }) {
-    return increment(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
-    TResult? Function(GetProductDetailsError value)? getProductDetailsError,
-    TResult? Function(GetProductDetailsLoading value)? getProductDetailsLoading,
-    TResult? Function(ChangeSliderIndex value)? chnageSliderIndex,
-    TResult? Function(Increment value)? increment,
-    TResult? Function(Decrement value)? decrement,
-  }) {
-    return increment?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
-    TResult Function(GetProductDetailsError value)? getProductDetailsError,
-    TResult Function(GetProductDetailsLoading value)? getProductDetailsLoading,
-    TResult Function(ChangeSliderIndex value)? chnageSliderIndex,
-    TResult Function(Increment value)? increment,
-    TResult Function(Decrement value)? decrement,
-    required TResult orElse(),
-  }) {
-    if (increment != null) {
-      return increment(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Increment implements ProductdetilsState {
-  const factory Increment() = _$IncrementImpl;
 }
 
 /// @nodoc
@@ -1058,9 +920,9 @@ class _$DecrementImpl implements Decrement {
         getProductDetailsSuccess,
     required TResult Function(String error) getProductDetailsError,
     required TResult Function() getProductDetailsLoading,
-    required TResult Function() chnageSliderIndex,
-    required TResult Function() increment,
+    required TResult Function() changeSliderIndex,
     required TResult Function() decrement,
+    required TResult Function() increment,
   }) {
     return decrement();
   }
@@ -1073,9 +935,9 @@ class _$DecrementImpl implements Decrement {
         getProductDetailsSuccess,
     TResult? Function(String error)? getProductDetailsError,
     TResult? Function()? getProductDetailsLoading,
-    TResult? Function()? chnageSliderIndex,
-    TResult? Function()? increment,
+    TResult? Function()? changeSliderIndex,
     TResult? Function()? decrement,
+    TResult? Function()? increment,
   }) {
     return decrement?.call();
   }
@@ -1088,9 +950,9 @@ class _$DecrementImpl implements Decrement {
         getProductDetailsSuccess,
     TResult Function(String error)? getProductDetailsError,
     TResult Function()? getProductDetailsLoading,
-    TResult Function()? chnageSliderIndex,
-    TResult Function()? increment,
+    TResult Function()? changeSliderIndex,
     TResult Function()? decrement,
+    TResult Function()? increment,
     required TResult orElse(),
   }) {
     if (decrement != null) {
@@ -1109,9 +971,9 @@ class _$DecrementImpl implements Decrement {
         getProductDetailsError,
     required TResult Function(GetProductDetailsLoading value)
         getProductDetailsLoading,
-    required TResult Function(ChangeSliderIndex value) chnageSliderIndex,
-    required TResult Function(Increment value) increment,
+    required TResult Function(ChangeSliderIndex value) changeSliderIndex,
     required TResult Function(Decrement value) decrement,
+    required TResult Function(Increment value) increment,
   }) {
     return decrement(this);
   }
@@ -1123,9 +985,9 @@ class _$DecrementImpl implements Decrement {
     TResult? Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
     TResult? Function(GetProductDetailsError value)? getProductDetailsError,
     TResult? Function(GetProductDetailsLoading value)? getProductDetailsLoading,
-    TResult? Function(ChangeSliderIndex value)? chnageSliderIndex,
-    TResult? Function(Increment value)? increment,
+    TResult? Function(ChangeSliderIndex value)? changeSliderIndex,
     TResult? Function(Decrement value)? decrement,
+    TResult? Function(Increment value)? increment,
   }) {
     return decrement?.call(this);
   }
@@ -1137,9 +999,9 @@ class _$DecrementImpl implements Decrement {
     TResult Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
     TResult Function(GetProductDetailsError value)? getProductDetailsError,
     TResult Function(GetProductDetailsLoading value)? getProductDetailsLoading,
-    TResult Function(ChangeSliderIndex value)? chnageSliderIndex,
-    TResult Function(Increment value)? increment,
+    TResult Function(ChangeSliderIndex value)? changeSliderIndex,
     TResult Function(Decrement value)? decrement,
+    TResult Function(Increment value)? increment,
     required TResult orElse(),
   }) {
     if (decrement != null) {
@@ -1151,4 +1013,142 @@ class _$DecrementImpl implements Decrement {
 
 abstract class Decrement implements ProductdetilsState {
   const factory Decrement() = _$DecrementImpl;
+}
+
+/// @nodoc
+abstract class _$$IncrementImplCopyWith<$Res> {
+  factory _$$IncrementImplCopyWith(
+          _$IncrementImpl value, $Res Function(_$IncrementImpl) then) =
+      __$$IncrementImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$IncrementImplCopyWithImpl<$Res>
+    extends _$ProductdetilsStateCopyWithImpl<$Res, _$IncrementImpl>
+    implements _$$IncrementImplCopyWith<$Res> {
+  __$$IncrementImplCopyWithImpl(
+      _$IncrementImpl _value, $Res Function(_$IncrementImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$IncrementImpl implements Increment {
+  const _$IncrementImpl();
+
+  @override
+  String toString() {
+    return 'ProductdetilsState.increment()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$IncrementImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(ProductDetailsEntity productDetailsEntity)
+        getProductDetailsSuccess,
+    required TResult Function(String error) getProductDetailsError,
+    required TResult Function() getProductDetailsLoading,
+    required TResult Function() changeSliderIndex,
+    required TResult Function() decrement,
+    required TResult Function() increment,
+  }) {
+    return increment();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(ProductDetailsEntity productDetailsEntity)?
+        getProductDetailsSuccess,
+    TResult? Function(String error)? getProductDetailsError,
+    TResult? Function()? getProductDetailsLoading,
+    TResult? Function()? changeSliderIndex,
+    TResult? Function()? decrement,
+    TResult? Function()? increment,
+  }) {
+    return increment?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(ProductDetailsEntity productDetailsEntity)?
+        getProductDetailsSuccess,
+    TResult Function(String error)? getProductDetailsError,
+    TResult Function()? getProductDetailsLoading,
+    TResult Function()? changeSliderIndex,
+    TResult Function()? decrement,
+    TResult Function()? increment,
+    required TResult orElse(),
+  }) {
+    if (increment != null) {
+      return increment();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetProductDetailsSuccess value)
+        getProductDetailsSuccess,
+    required TResult Function(GetProductDetailsError value)
+        getProductDetailsError,
+    required TResult Function(GetProductDetailsLoading value)
+        getProductDetailsLoading,
+    required TResult Function(ChangeSliderIndex value) changeSliderIndex,
+    required TResult Function(Decrement value) decrement,
+    required TResult Function(Increment value) increment,
+  }) {
+    return increment(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
+    TResult? Function(GetProductDetailsError value)? getProductDetailsError,
+    TResult? Function(GetProductDetailsLoading value)? getProductDetailsLoading,
+    TResult? Function(ChangeSliderIndex value)? changeSliderIndex,
+    TResult? Function(Decrement value)? decrement,
+    TResult? Function(Increment value)? increment,
+  }) {
+    return increment?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
+    TResult Function(GetProductDetailsError value)? getProductDetailsError,
+    TResult Function(GetProductDetailsLoading value)? getProductDetailsLoading,
+    TResult Function(ChangeSliderIndex value)? changeSliderIndex,
+    TResult Function(Decrement value)? decrement,
+    TResult Function(Increment value)? increment,
+    required TResult orElse(),
+  }) {
+    if (increment != null) {
+      return increment(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Increment implements ProductdetilsState {
+  const factory Increment() = _$IncrementImpl;
 }

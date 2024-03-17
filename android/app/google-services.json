@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "296108192882",
+    "project_id": "slash-task",
+    "storage_bucket": "slash-task.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296108192882:android:da16cf88bf70bd0901feeb",
+        "android_client_info": {
+          "package_name": "com.example.slash_task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgcAlJDhJwOyOIl9WcQSDy0b6HlDq6Sy4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

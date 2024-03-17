@@ -16,7 +16,7 @@ class ProductDetailsBody extends StatelessWidget {
     super.key,
     required this.cubit,
   });
-  final ProductdetilsCubit cubit;
+  final ProductDetailsCubit cubit;
   @override
   Widget build(BuildContext context) {
     return Column(

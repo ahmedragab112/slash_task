@@ -5,6 +5,8 @@ import 'package:slash_task/core/spaceing/spaceing.dart';
 import 'package:slash_task/core/utils/color/app_color.dart';
 import 'package:slash_task/core/utils/style/app_textstyle.dart';
 import 'package:slash_task/feature/features/deatils/domain/entities/product_details_entity.dart';
+import 'package:slash_task/feature/features/deatils/presentation/widgets/custom_color.dart';
+import 'package:slash_task/feature/features/deatils/presentation/widgets/product_prooerties.dart';
 
 class AvaiableProperties extends StatelessWidget {
   const AvaiableProperties(
@@ -33,7 +35,8 @@ class AvaiableProperties extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) => atrpute == 'Color'
                   ? CustomColorWidget(
-                      colorValue: valus[index].value ?? '00000000',
+                      colorValue: valus[index].value ?? '00000000', width: 35.w,
+                      height: 35.h,
                     )
                   : CustomProductProperties(
                       text: valus[index].value ?? '',
@@ -44,46 +47,5 @@ class AvaiableProperties extends StatelessWidget {
         ],
       ),
     ).setPadding(context, horizontal: 16);
-  }
-}
-
-class CustomProductProperties extends StatelessWidget {
-  const CustomProductProperties({super.key, required this.text});
-  final String text;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
-      constraints: BoxConstraints(minHeight: 8.h, minWidth: 16.w),
-      decoration: BoxDecoration(
-        color: AppColor.blueColor,
-        borderRadius: BorderRadius.circular(20.r),
-      ),
-      child: Text(
-        text,
-        style: AppTextStyle.font18BoldBlue
-            .copyWith(fontWeight: FontWeight.w500, color: Colors.white),
-      ),
-    );
-  }
-}
-
-class CustomColorWidget extends StatelessWidget {
-  const CustomColorWidget({super.key, required this.colorValue});
-  final String colorValue;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      constraints: BoxConstraints(
-        minHeight: 36.h,
-        minWidth: 36.w,
-      ),
-      decoration: BoxDecoration(
-          border: Border.all(color: AppColor.blueColor, width: 1),
-          shape: BoxShape.circle,
-          color: Color(int.parse('0xff${colorValue.replaceAll('#', '')}'))),
-    );
   }
 }

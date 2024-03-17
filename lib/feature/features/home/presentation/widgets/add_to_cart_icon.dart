@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:slash_task/core/utils/color/app_color.dart';
-import 'package:slash_task/feature/features/home/presentation/manager/home_cubit.dart';
+import 'package:slash_task/feature/features/cart/manager/cart_cubit.dart';
 
-class AddToCart extends StatelessWidget {
-  const AddToCart({super.key});
+import '../../../../../core/utils/color/app_color.dart';
+
+class AddToCartIcon extends StatelessWidget {
+  const AddToCartIcon({super.key, required this.productId});
+  final int productId;
 
   @override
   Widget build(BuildContext context) {
+    var cubit = context.read<CartCubit>();
     return GestureDetector(
       onTap: () {
-        context.read<HomeCubit>().addToCartCounter();
+        cubit.addProductToCart(productId: productId);
       },
       child: Container(
           width: 30.w,
@@ -21,8 +24,7 @@ class AddToCart extends StatelessWidget {
             shape: BoxShape.circle,
             color: AppColor.blueColor,
           ),
-          child:
-              Icon(Icons.add_shopping_cart, color: Colors.white, size: 20.sp)),
+          child: Icon(Icons.shopping_cart, color: Colors.white, size: 20.sp)),
     );
   }
 }

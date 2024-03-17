@@ -6,7 +6,7 @@ import 'package:slash_task/feature/features/deatils/domain/usecases/details_usec
 part 'productdetils_state.dart';
 part 'productdetils_cubit.freezed.dart';
 
-class ProductdetilsCubit extends Cubit<ProductdetilsState> {
+class ProductDetailsCubit extends Cubit<ProductdetilsState> {
   final DetailsUseCase useCase;
   ProductDetailsEntity? productDetailsEntity;
   int productVarientImagesIndex = 0;
@@ -14,7 +14,7 @@ class ProductdetilsCubit extends Cubit<ProductdetilsState> {
   int quantity = 1;
   int price = 0;
 
-  ProductdetilsCubit({required this.useCase})
+  ProductDetailsCubit({required this.useCase})
       : super(const ProductdetilsState.initial());
 
   Future<void> getProductDetails({required int id}) async {
