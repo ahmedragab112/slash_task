@@ -27,10 +27,8 @@ class AnOtherProductsFromTheSameVariations extends StatelessWidget {
                 ? variationsEntity.productVarientImages!
                     .map((e) => GestureDetector(
                           onTap: () {
-                            context.pushReplacementNamed(
-                                AppRoutes.productDetails,
-                                arguments:
-                                    cubit.productDetailsEntity!.data!.id);
+                            context.pushNamed(AppRoutes.productDetails,
+                                arguments: e.id);
                           },
                           child: Container(
                             constraints:

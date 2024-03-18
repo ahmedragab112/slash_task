@@ -27,7 +27,6 @@ class ProductDetailsBody extends StatelessWidget {
           100,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
-            shrinkWrap: true,
             itemCount:
                 cubit.productDetailsEntity?.data?.variations?.length ?? 0,
             itemBuilder: (context, index) =>
@@ -35,11 +34,11 @@ class ProductDetailsBody extends StatelessWidget {
               index: index,
               cubit: cubit,
               variationsEntity:
-                  cubit.productDetailsEntity?.data?.variations?[index] ??
+                  cubit.productDetailsEntity?.data?.variations?[0] ??
                       VariationsEntity(),
             ),
             separatorBuilder: (BuildContext context, int index) =>
-                const HorizantelSpace(20),
+                const HorizantelSpace(5),
           ),
         ),
         const VerticalSpace(24),
