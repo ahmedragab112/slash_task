@@ -37,15 +37,25 @@ class DetailsBody extends StatelessWidget {
               SliverList.separated(
                 separatorBuilder: (context, index) => const VerticalSpace(8),
                 itemBuilder: (context, index) {
-                  cubit.productDetailsEntity?.data?.avaiableProperties?[index]
-                      .property;
                   return AvaiableProperties(
-                    atrpute: cubit.productDetailsEntity?.data
-                            ?.avaiableProperties?[index].property ??
-                        '',
-                    valus: cubit.productDetailsEntity?.data
-                            ?.avaiableProperties?[index].values ??
-                        [],
+                    atrpute: cubit
+                            .productDetailsEntity
+                            ?.data
+                            ?.variations?[cubit.variationsIndex]
+                            .productPropertiesValues?[index]
+                            .property ??
+                        '', color:cubit
+                            .productDetailsEntity
+                            ?.data
+                            ?.variations?[cubit.variationsIndex]
+                            .productPropertiesValues?[index]
+                            .value??  '00000000', text:cubit
+                            .productDetailsEntity
+                            ?.data
+                            ?.variations?[cubit.variationsIndex]
+                            .productPropertiesValues?[index]
+                            .value?? '' ,
+                
                   );
                 },
                 itemCount: cubit.productDetailsEntity?.data?.avaiableProperties

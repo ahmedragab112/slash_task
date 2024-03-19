@@ -12,8 +12,7 @@ abstract class ApiManager {
   factory ApiManager(Dio dio, {String baseUrl}) = _ApiManager;
 
   @GET(AppEndPoint.getAllProducts)
-  Future<ProductDataModel> getAllProducts(
-      @Query('limit') String limit, @Query('page') String page);
+  Future<ProductDataModel> getAllProducts();
 
   @GET('${AppEndPoint.getProductDetails}/{id}')
   Future<ProductDetailsDataModel> getProductDetails(@Path('id') int id);

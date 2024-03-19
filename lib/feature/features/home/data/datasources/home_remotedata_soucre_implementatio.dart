@@ -6,5 +6,5 @@ class HomeRemoteDataSourceImplementation implements HomeRemoteDataSource {
   final ApiManager apiManager;
   const HomeRemoteDataSourceImplementation({required this.apiManager});
   @override
-  Future<ProductDataModel> getAllProduct() async => await apiManager.getAllProducts('20', '1');
+  Future<ProductDataModel> getAllProduct() async => await apiManager.getAllProducts();
 }

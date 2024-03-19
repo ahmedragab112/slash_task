@@ -34,8 +34,9 @@ class ProductDetailsBody extends StatelessWidget {
               index: index,
               cubit: cubit,
               variationsEntity:
-                  cubit.productDetailsEntity?.data?.variations?[0] ??
+                  cubit.productDetailsEntity?.data?.variations?[index] ??
                       VariationsEntity(),
+              selected: cubit.selected,
             ),
             separatorBuilder: (BuildContext context, int index) =>
                 const HorizantelSpace(5),

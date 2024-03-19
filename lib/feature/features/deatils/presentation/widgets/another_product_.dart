@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:slash_task/config/router/routes.dart';
-import 'package:slash_task/core/extention/extention.dart';
-import 'package:slash_task/core/spaceing/spaceing.dart';
 import 'package:slash_task/core/utils/color/app_color.dart';
 import 'package:slash_task/core/utils/widget/custom_network_image.dart';
 import 'package:slash_task/feature/features/deatils/domain/entities/product_details_entity.dart';
@@ -13,39 +10,41 @@ class AnOtherProductsFromTheSameVariations extends StatelessWidget {
       {super.key,
       required this.index,
       required this.cubit,
-      required this.variationsEntity});
+      required this.variationsEntity,
+      required this.selected});
 
   final int index;
   final VariationsEntity variationsEntity;
   final ProductDetailsCubit cubit;
-
+  final bool selected;
   @override
   Widget build(BuildContext context) {
-    return VerticalSpace(100,
-        child: Row(
-            children: variationsEntity.productVarientImages != null
-                ? variationsEntity.productVarientImages!
-                    .map((e) => GestureDetector(
-                          onTap: () {
-                            context.pushNamed(AppRoutes.productDetails,
-                                arguments: e.id);
-                          },
-                          child: Container(
-                            constraints:
-                                BoxConstraints(minWidth: 50.w, minHeight: 50.h),
-                            foregroundDecoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15.r),
-                                border: Border.all(
-                                    color: AppColor.blueColor, width: 2)),
-                            child: ClipRRect(
-                                borderRadius: BorderRadius.circular(15.r),
-                                child: CustomNetWorkImage(
-                                    imagePath: e.imagePath ?? '',
-                                    width: 80.w,
-                                    height: 80.h)),
-                          ),
-                        ))
-                    .toList()
-                : []));
+    return Container(
+        padding: const EdgeInsets.all(3),
+        decoration: selected
+            ? BoxDecoration(
+                color: AppColor.blueDark,
+                borderRadius: BorderRadius.circular(18.r))
+            : null,
+        child: GestureDetector(
+          onTap: () {
+            cubit.productVarientImagesIndex = 0;
+            cubit.variationsIndex = index;
+          },
+          child: Container(
+            constraints: BoxConstraints(minWidth: 50.w, minHeight: 50.h),
+            foregroundDecoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.r),
+                border: Border.all(color: AppColor.blueColor, width: 2)),
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(15.r),
+                child: CustomNetWorkImage(
+                    imagePath:
+                        variationsEntity.productVarientImages?[0].imagePath ??
+                            '',
+                    width: 80.w,
+                    height: 80.h)),
+          ),
+        ));
   }
 }

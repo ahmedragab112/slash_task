@@ -12,6 +12,7 @@ class ProductDetailsCubit extends Cubit<ProductdetilsState> {
   int productVarientImagesIndex = 0;
   int variationsIndex = 0;
   int quantity = 1;
+  bool selected = false;
   int price = 0;
 
   ProductDetailsCubit({required this.useCase})

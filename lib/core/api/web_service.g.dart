@@ -21,15 +21,9 @@ class _ApiManager implements ApiManager {
   String? baseUrl;
 
   @override
-  Future<ProductDataModel> getAllProducts(
-    String limit,
-    String page,
-  ) async {
+  Future<ProductDataModel> getAllProducts() async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'limit': limit,
-      r'page': page,
-    };
+    final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _result = await _dio
