@@ -19,18 +19,19 @@ class AnOtherProductsFromTheSameVariations extends StatelessWidget {
   final bool selected;
   @override
   Widget build(BuildContext context) {
-    return Container(
-        padding: const EdgeInsets.all(3),
-        decoration: selected
-            ? BoxDecoration(
-                color: AppColor.blueDark,
-                borderRadius: BorderRadius.circular(18.r))
-            : null,
-        child: GestureDetector(
-          onTap: () {
-            cubit.productVarientImagesIndex = 0;
-            cubit.variationsIndex = index;
-          },
+    return GestureDetector(
+      onTap: () {
+        cubit.selectIndex(index);
+        cubit.variationsIndex = index;
+        cubit.changeSliderIndex(0);
+      },
+      child: Container(
+          padding: const EdgeInsets.all(4),
+          decoration: cubit.selectedInde == index
+              ? BoxDecoration(
+                  color: AppColor.blueColor,
+                  borderRadius: BorderRadius.circular(15.r))
+              : null,
           child: Container(
             constraints: BoxConstraints(minWidth: 50.w, minHeight: 50.h),
             foregroundDecoration: BoxDecoration(
@@ -44,7 +45,7 @@ class AnOtherProductsFromTheSameVariations extends StatelessWidget {
                             '',
                     width: 80.w,
                     height: 80.h)),
-          ),
-        ));
+          )),
+    );
   }
 }

@@ -27,6 +27,7 @@ class CustomNetWorkImage extends StatelessWidget {
               topLeft: Radius.circular(15.r), topRight: Radius.circular(15.r))
           : borderRadius,
       child: CachedNetworkImage(
+        
           imageUrl: imagePath,
           placeholder: (context, url) => Center(
                   child: CircularProgressIndicator(
