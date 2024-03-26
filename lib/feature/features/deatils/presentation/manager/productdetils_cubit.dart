@@ -11,9 +11,11 @@ class ProductDetailsCubit extends Cubit<ProductdetilsState> {
   ProductDetailsEntity? productDetailsEntity;
   int productVarientImagesIndex = 0;
   int variationsIndex = 0;
+  List<ValuesEntity>? materialValues;
   int selectedInde = 0;
   int quantity = 1;
   bool selected = false;
+  int selectedColorIndex = 0;
   int price = 0;
 
   ProductDetailsCubit({required this.useCase})
@@ -54,9 +56,16 @@ class ProductDetailsCubit extends Cubit<ProductdetilsState> {
     productVarientImagesIndex = index;
     emit(const ChangeSliderIndex());
   }
-  void selectIndex(int index){
+
+  void selectIndex(int index) {
     emit(const ProductdetilsState.initial());
     selectedInde = index;
     emit(const SelectIndex());
+  }
+
+  void changeSelectedColorIndex(int index) {
+    emit(const ProductdetilsState.initial());
+    selectedColorIndex = index;
+    emit(const ChangeSelectedColorIndex());
   }
 }

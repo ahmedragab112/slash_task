@@ -22,7 +22,8 @@ class DetailsBody extends StatelessWidget {
             state is ChangeSliderIndex ||
             state is Increment ||
             state is Decrement ||
-            state is SelectIndex) {
+            state is SelectIndex ||
+            state is ChangeSelectedColorIndex) {
           return CustomScrollView(
             slivers: [
               SliverToBoxAdapter(
@@ -39,20 +40,6 @@ class DetailsBody extends StatelessWidget {
                 separatorBuilder: (context, index) => const VerticalSpace(8),
                 itemBuilder: (context, index) {
                   return AvaiableProperties(
-                    atrpute: cubit
-                            .productDetailsEntity
-                            ?.data
-                            ?.variations?[cubit.variationsIndex]
-                            .productPropertiesValues?[index]
-                            .property ??
-                        '',
-                    color: cubit
-                            .productDetailsEntity
-                            ?.data
-                            ?.variations?[cubit.variationsIndex]
-                            .productPropertiesValues?[index]
-                            .value ??
-                        '00000000',
                     text: cubit
                             .productDetailsEntity
                             ?.data
@@ -60,6 +47,8 @@ class DetailsBody extends StatelessWidget {
                             .productPropertiesValues?[index]
                             .value ??
                         '',
+                    avaiableProperties: cubit
+                        .productDetailsEntity!.data!.avaiableProperties![index],
                   );
                 },
                 itemCount: cubit.productDetailsEntity?.data?.avaiableProperties

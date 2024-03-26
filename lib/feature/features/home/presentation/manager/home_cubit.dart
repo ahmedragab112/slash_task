@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -18,7 +17,6 @@ class HomeCubit extends Cubit<HomeState> {
     final data = await useCase.getAllProduct();
     data.when(
         data: (data) {
-          log(data.data![0].id.toString());
           return emit(HomeState.loaded(data: data));
         },
         error: (error) =>

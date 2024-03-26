@@ -23,7 +23,7 @@ class AnOtherProductsFromTheSameVariations extends StatelessWidget {
       onTap: () {
         cubit.selectIndex(index);
         cubit.variationsIndex = index;
-        cubit.changeSliderIndex(0);
+        cubit.changeSelectedColorIndex(index);
       },
       child: Container(
           padding: const EdgeInsets.all(4),

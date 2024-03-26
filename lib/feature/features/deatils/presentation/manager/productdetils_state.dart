@@ -20,9 +20,13 @@ const factory ProductdetilsState.decrement()= Decrement;
 
 const factory ProductdetilsState.increment()= Increment;
 
- 
 
 const factory ProductdetilsState.selectIndex()= SelectIndex;
 
+
+const factory ProductdetilsState.changeSelectedColorIndex()= ChangeSelectedColorIndex;
+
+
+ 
 }
 

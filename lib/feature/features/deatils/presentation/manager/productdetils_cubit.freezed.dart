@@ -27,6 +27,7 @@ mixin _$ProductdetilsState {
     required TResult Function() decrement,
     required TResult Function() increment,
     required TResult Function() selectIndex,
+    required TResult Function() changeSelectedColorIndex,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,6 +41,7 @@ mixin _$ProductdetilsState {
     TResult? Function()? decrement,
     TResult? Function()? increment,
     TResult? Function()? selectIndex,
+    TResult? Function()? changeSelectedColorIndex,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -53,6 +55,7 @@ mixin _$ProductdetilsState {
     TResult Function()? decrement,
     TResult Function()? increment,
     TResult Function()? selectIndex,
+    TResult Function()? changeSelectedColorIndex,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -69,6 +72,8 @@ mixin _$ProductdetilsState {
     required TResult Function(Decrement value) decrement,
     required TResult Function(Increment value) increment,
     required TResult Function(SelectIndex value) selectIndex,
+    required TResult Function(ChangeSelectedColorIndex value)
+        changeSelectedColorIndex,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,6 +86,7 @@ mixin _$ProductdetilsState {
     TResult? Function(Decrement value)? decrement,
     TResult? Function(Increment value)? increment,
     TResult? Function(SelectIndex value)? selectIndex,
+    TResult? Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -93,6 +99,7 @@ mixin _$ProductdetilsState {
     TResult Function(Decrement value)? decrement,
     TResult Function(Increment value)? increment,
     TResult Function(SelectIndex value)? selectIndex,
+    TResult Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -163,6 +170,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() decrement,
     required TResult Function() increment,
     required TResult Function() selectIndex,
+    required TResult Function() changeSelectedColorIndex,
   }) {
     return initial();
   }
@@ -179,6 +187,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? decrement,
     TResult? Function()? increment,
     TResult? Function()? selectIndex,
+    TResult? Function()? changeSelectedColorIndex,
   }) {
     return initial?.call();
   }
@@ -195,6 +204,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? decrement,
     TResult Function()? increment,
     TResult Function()? selectIndex,
+    TResult Function()? changeSelectedColorIndex,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -217,6 +227,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(Decrement value) decrement,
     required TResult Function(Increment value) increment,
     required TResult Function(SelectIndex value) selectIndex,
+    required TResult Function(ChangeSelectedColorIndex value)
+        changeSelectedColorIndex,
   }) {
     return initial(this);
   }
@@ -232,6 +244,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(Decrement value)? decrement,
     TResult? Function(Increment value)? increment,
     TResult? Function(SelectIndex value)? selectIndex,
+    TResult? Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
   }) {
     return initial?.call(this);
   }
@@ -247,6 +260,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(Decrement value)? decrement,
     TResult Function(Increment value)? increment,
     TResult Function(SelectIndex value)? selectIndex,
+    TResult Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -338,6 +352,7 @@ class _$GetProductDetailsSuccessImpl implements GetProductDetailsSuccess {
     required TResult Function() decrement,
     required TResult Function() increment,
     required TResult Function() selectIndex,
+    required TResult Function() changeSelectedColorIndex,
   }) {
     return getProductDetailsSuccess(productDetailsEntity);
   }
@@ -354,6 +369,7 @@ class _$GetProductDetailsSuccessImpl implements GetProductDetailsSuccess {
     TResult? Function()? decrement,
     TResult? Function()? increment,
     TResult? Function()? selectIndex,
+    TResult? Function()? changeSelectedColorIndex,
   }) {
     return getProductDetailsSuccess?.call(productDetailsEntity);
   }
@@ -370,6 +386,7 @@ class _$GetProductDetailsSuccessImpl implements GetProductDetailsSuccess {
     TResult Function()? decrement,
     TResult Function()? increment,
     TResult Function()? selectIndex,
+    TResult Function()? changeSelectedColorIndex,
     required TResult orElse(),
   }) {
     if (getProductDetailsSuccess != null) {
@@ -392,6 +409,8 @@ class _$GetProductDetailsSuccessImpl implements GetProductDetailsSuccess {
     required TResult Function(Decrement value) decrement,
     required TResult Function(Increment value) increment,
     required TResult Function(SelectIndex value) selectIndex,
+    required TResult Function(ChangeSelectedColorIndex value)
+        changeSelectedColorIndex,
   }) {
     return getProductDetailsSuccess(this);
   }
@@ -407,6 +426,7 @@ class _$GetProductDetailsSuccessImpl implements GetProductDetailsSuccess {
     TResult? Function(Decrement value)? decrement,
     TResult? Function(Increment value)? increment,
     TResult? Function(SelectIndex value)? selectIndex,
+    TResult? Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
   }) {
     return getProductDetailsSuccess?.call(this);
   }
@@ -422,6 +442,7 @@ class _$GetProductDetailsSuccessImpl implements GetProductDetailsSuccess {
     TResult Function(Decrement value)? decrement,
     TResult Function(Increment value)? increment,
     TResult Function(SelectIndex value)? selectIndex,
+    TResult Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
     required TResult orElse(),
   }) {
     if (getProductDetailsSuccess != null) {
@@ -518,6 +539,7 @@ class _$GetProductDetailsErrorImpl implements GetProductDetailsError {
     required TResult Function() decrement,
     required TResult Function() increment,
     required TResult Function() selectIndex,
+    required TResult Function() changeSelectedColorIndex,
   }) {
     return getProductDetailsError(error);
   }
@@ -534,6 +556,7 @@ class _$GetProductDetailsErrorImpl implements GetProductDetailsError {
     TResult? Function()? decrement,
     TResult? Function()? increment,
     TResult? Function()? selectIndex,
+    TResult? Function()? changeSelectedColorIndex,
   }) {
     return getProductDetailsError?.call(error);
   }
@@ -550,6 +573,7 @@ class _$GetProductDetailsErrorImpl implements GetProductDetailsError {
     TResult Function()? decrement,
     TResult Function()? increment,
     TResult Function()? selectIndex,
+    TResult Function()? changeSelectedColorIndex,
     required TResult orElse(),
   }) {
     if (getProductDetailsError != null) {
@@ -572,6 +596,8 @@ class _$GetProductDetailsErrorImpl implements GetProductDetailsError {
     required TResult Function(Decrement value) decrement,
     required TResult Function(Increment value) increment,
     required TResult Function(SelectIndex value) selectIndex,
+    required TResult Function(ChangeSelectedColorIndex value)
+        changeSelectedColorIndex,
   }) {
     return getProductDetailsError(this);
   }
@@ -587,6 +613,7 @@ class _$GetProductDetailsErrorImpl implements GetProductDetailsError {
     TResult? Function(Decrement value)? decrement,
     TResult? Function(Increment value)? increment,
     TResult? Function(SelectIndex value)? selectIndex,
+    TResult? Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
   }) {
     return getProductDetailsError?.call(this);
   }
@@ -602,6 +629,7 @@ class _$GetProductDetailsErrorImpl implements GetProductDetailsError {
     TResult Function(Decrement value)? decrement,
     TResult Function(Increment value)? increment,
     TResult Function(SelectIndex value)? selectIndex,
+    TResult Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
     required TResult orElse(),
   }) {
     if (getProductDetailsError != null) {
@@ -672,6 +700,7 @@ class _$GetProductDetailsLoadingImpl implements GetProductDetailsLoading {
     required TResult Function() decrement,
     required TResult Function() increment,
     required TResult Function() selectIndex,
+    required TResult Function() changeSelectedColorIndex,
   }) {
     return getProductDetailsLoading();
   }
@@ -688,6 +717,7 @@ class _$GetProductDetailsLoadingImpl implements GetProductDetailsLoading {
     TResult? Function()? decrement,
     TResult? Function()? increment,
     TResult? Function()? selectIndex,
+    TResult? Function()? changeSelectedColorIndex,
   }) {
     return getProductDetailsLoading?.call();
   }
@@ -704,6 +734,7 @@ class _$GetProductDetailsLoadingImpl implements GetProductDetailsLoading {
     TResult Function()? decrement,
     TResult Function()? increment,
     TResult Function()? selectIndex,
+    TResult Function()? changeSelectedColorIndex,
     required TResult orElse(),
   }) {
     if (getProductDetailsLoading != null) {
@@ -726,6 +757,8 @@ class _$GetProductDetailsLoadingImpl implements GetProductDetailsLoading {
     required TResult Function(Decrement value) decrement,
     required TResult Function(Increment value) increment,
     required TResult Function(SelectIndex value) selectIndex,
+    required TResult Function(ChangeSelectedColorIndex value)
+        changeSelectedColorIndex,
   }) {
     return getProductDetailsLoading(this);
   }
@@ -741,6 +774,7 @@ class _$GetProductDetailsLoadingImpl implements GetProductDetailsLoading {
     TResult? Function(Decrement value)? decrement,
     TResult? Function(Increment value)? increment,
     TResult? Function(SelectIndex value)? selectIndex,
+    TResult? Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
   }) {
     return getProductDetailsLoading?.call(this);
   }
@@ -756,6 +790,7 @@ class _$GetProductDetailsLoadingImpl implements GetProductDetailsLoading {
     TResult Function(Decrement value)? decrement,
     TResult Function(Increment value)? increment,
     TResult Function(SelectIndex value)? selectIndex,
+    TResult Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
     required TResult orElse(),
   }) {
     if (getProductDetailsLoading != null) {
@@ -816,6 +851,7 @@ class _$ChangeSliderIndexImpl implements ChangeSliderIndex {
     required TResult Function() decrement,
     required TResult Function() increment,
     required TResult Function() selectIndex,
+    required TResult Function() changeSelectedColorIndex,
   }) {
     return changeSliderIndex();
   }
@@ -832,6 +868,7 @@ class _$ChangeSliderIndexImpl implements ChangeSliderIndex {
     TResult? Function()? decrement,
     TResult? Function()? increment,
     TResult? Function()? selectIndex,
+    TResult? Function()? changeSelectedColorIndex,
   }) {
     return changeSliderIndex?.call();
   }
@@ -848,6 +885,7 @@ class _$ChangeSliderIndexImpl implements ChangeSliderIndex {
     TResult Function()? decrement,
     TResult Function()? increment,
     TResult Function()? selectIndex,
+    TResult Function()? changeSelectedColorIndex,
     required TResult orElse(),
   }) {
     if (changeSliderIndex != null) {
@@ -870,6 +908,8 @@ class _$ChangeSliderIndexImpl implements ChangeSliderIndex {
     required TResult Function(Decrement value) decrement,
     required TResult Function(Increment value) increment,
     required TResult Function(SelectIndex value) selectIndex,
+    required TResult Function(ChangeSelectedColorIndex value)
+        changeSelectedColorIndex,
   }) {
     return changeSliderIndex(this);
   }
@@ -885,6 +925,7 @@ class _$ChangeSliderIndexImpl implements ChangeSliderIndex {
     TResult? Function(Decrement value)? decrement,
     TResult? Function(Increment value)? increment,
     TResult? Function(SelectIndex value)? selectIndex,
+    TResult? Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
   }) {
     return changeSliderIndex?.call(this);
   }
@@ -900,6 +941,7 @@ class _$ChangeSliderIndexImpl implements ChangeSliderIndex {
     TResult Function(Decrement value)? decrement,
     TResult Function(Increment value)? increment,
     TResult Function(SelectIndex value)? selectIndex,
+    TResult Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
     required TResult orElse(),
   }) {
     if (changeSliderIndex != null) {
@@ -960,6 +1002,7 @@ class _$DecrementImpl implements Decrement {
     required TResult Function() decrement,
     required TResult Function() increment,
     required TResult Function() selectIndex,
+    required TResult Function() changeSelectedColorIndex,
   }) {
     return decrement();
   }
@@ -976,6 +1019,7 @@ class _$DecrementImpl implements Decrement {
     TResult? Function()? decrement,
     TResult? Function()? increment,
     TResult? Function()? selectIndex,
+    TResult? Function()? changeSelectedColorIndex,
   }) {
     return decrement?.call();
   }
@@ -992,6 +1036,7 @@ class _$DecrementImpl implements Decrement {
     TResult Function()? decrement,
     TResult Function()? increment,
     TResult Function()? selectIndex,
+    TResult Function()? changeSelectedColorIndex,
     required TResult orElse(),
   }) {
     if (decrement != null) {
@@ -1014,6 +1059,8 @@ class _$DecrementImpl implements Decrement {
     required TResult Function(Decrement value) decrement,
     required TResult Function(Increment value) increment,
     required TResult Function(SelectIndex value) selectIndex,
+    required TResult Function(ChangeSelectedColorIndex value)
+        changeSelectedColorIndex,
   }) {
     return decrement(this);
   }
@@ -1029,6 +1076,7 @@ class _$DecrementImpl implements Decrement {
     TResult? Function(Decrement value)? decrement,
     TResult? Function(Increment value)? increment,
     TResult? Function(SelectIndex value)? selectIndex,
+    TResult? Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
   }) {
     return decrement?.call(this);
   }
@@ -1044,6 +1092,7 @@ class _$DecrementImpl implements Decrement {
     TResult Function(Decrement value)? decrement,
     TResult Function(Increment value)? increment,
     TResult Function(SelectIndex value)? selectIndex,
+    TResult Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
     required TResult orElse(),
   }) {
     if (decrement != null) {
@@ -1104,6 +1153,7 @@ class _$IncrementImpl implements Increment {
     required TResult Function() decrement,
     required TResult Function() increment,
     required TResult Function() selectIndex,
+    required TResult Function() changeSelectedColorIndex,
   }) {
     return increment();
   }
@@ -1120,6 +1170,7 @@ class _$IncrementImpl implements Increment {
     TResult? Function()? decrement,
     TResult? Function()? increment,
     TResult? Function()? selectIndex,
+    TResult? Function()? changeSelectedColorIndex,
   }) {
     return increment?.call();
   }
@@ -1136,6 +1187,7 @@ class _$IncrementImpl implements Increment {
     TResult Function()? decrement,
     TResult Function()? increment,
     TResult Function()? selectIndex,
+    TResult Function()? changeSelectedColorIndex,
     required TResult orElse(),
   }) {
     if (increment != null) {
@@ -1158,6 +1210,8 @@ class _$IncrementImpl implements Increment {
     required TResult Function(Decrement value) decrement,
     required TResult Function(Increment value) increment,
     required TResult Function(SelectIndex value) selectIndex,
+    required TResult Function(ChangeSelectedColorIndex value)
+        changeSelectedColorIndex,
   }) {
     return increment(this);
   }
@@ -1173,6 +1227,7 @@ class _$IncrementImpl implements Increment {
     TResult? Function(Decrement value)? decrement,
     TResult? Function(Increment value)? increment,
     TResult? Function(SelectIndex value)? selectIndex,
+    TResult? Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
   }) {
     return increment?.call(this);
   }
@@ -1188,6 +1243,7 @@ class _$IncrementImpl implements Increment {
     TResult Function(Decrement value)? decrement,
     TResult Function(Increment value)? increment,
     TResult Function(SelectIndex value)? selectIndex,
+    TResult Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
     required TResult orElse(),
   }) {
     if (increment != null) {
@@ -1248,6 +1304,7 @@ class _$SelectIndexImpl implements SelectIndex {
     required TResult Function() decrement,
     required TResult Function() increment,
     required TResult Function() selectIndex,
+    required TResult Function() changeSelectedColorIndex,
   }) {
     return selectIndex();
   }
@@ -1264,6 +1321,7 @@ class _$SelectIndexImpl implements SelectIndex {
     TResult? Function()? decrement,
     TResult? Function()? increment,
     TResult? Function()? selectIndex,
+    TResult? Function()? changeSelectedColorIndex,
   }) {
     return selectIndex?.call();
   }
@@ -1280,6 +1338,7 @@ class _$SelectIndexImpl implements SelectIndex {
     TResult Function()? decrement,
     TResult Function()? increment,
     TResult Function()? selectIndex,
+    TResult Function()? changeSelectedColorIndex,
     required TResult orElse(),
   }) {
     if (selectIndex != null) {
@@ -1302,6 +1361,8 @@ class _$SelectIndexImpl implements SelectIndex {
     required TResult Function(Decrement value) decrement,
     required TResult Function(Increment value) increment,
     required TResult Function(SelectIndex value) selectIndex,
+    required TResult Function(ChangeSelectedColorIndex value)
+        changeSelectedColorIndex,
   }) {
     return selectIndex(this);
   }
@@ -1317,6 +1378,7 @@ class _$SelectIndexImpl implements SelectIndex {
     TResult? Function(Decrement value)? decrement,
     TResult? Function(Increment value)? increment,
     TResult? Function(SelectIndex value)? selectIndex,
+    TResult? Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
   }) {
     return selectIndex?.call(this);
   }
@@ -1332,6 +1394,7 @@ class _$SelectIndexImpl implements SelectIndex {
     TResult Function(Decrement value)? decrement,
     TResult Function(Increment value)? increment,
     TResult Function(SelectIndex value)? selectIndex,
+    TResult Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
     required TResult orElse(),
   }) {
     if (selectIndex != null) {
@@ -1343,4 +1406,159 @@ class _$SelectIndexImpl implements SelectIndex {
 
 abstract class SelectIndex implements ProductdetilsState {
   const factory SelectIndex() = _$SelectIndexImpl;
+}
+
+/// @nodoc
+abstract class _$$ChangeSelectedColorIndexImplCopyWith<$Res> {
+  factory _$$ChangeSelectedColorIndexImplCopyWith(
+          _$ChangeSelectedColorIndexImpl value,
+          $Res Function(_$ChangeSelectedColorIndexImpl) then) =
+      __$$ChangeSelectedColorIndexImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ChangeSelectedColorIndexImplCopyWithImpl<$Res>
+    extends _$ProductdetilsStateCopyWithImpl<$Res,
+        _$ChangeSelectedColorIndexImpl>
+    implements _$$ChangeSelectedColorIndexImplCopyWith<$Res> {
+  __$$ChangeSelectedColorIndexImplCopyWithImpl(
+      _$ChangeSelectedColorIndexImpl _value,
+      $Res Function(_$ChangeSelectedColorIndexImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ChangeSelectedColorIndexImpl implements ChangeSelectedColorIndex {
+  const _$ChangeSelectedColorIndexImpl();
+
+  @override
+  String toString() {
+    return 'ProductdetilsState.changeSelectedColorIndex()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeSelectedColorIndexImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(ProductDetailsEntity productDetailsEntity)
+        getProductDetailsSuccess,
+    required TResult Function(String error) getProductDetailsError,
+    required TResult Function() getProductDetailsLoading,
+    required TResult Function() changeSliderIndex,
+    required TResult Function() decrement,
+    required TResult Function() increment,
+    required TResult Function() selectIndex,
+    required TResult Function() changeSelectedColorIndex,
+  }) {
+    return changeSelectedColorIndex();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(ProductDetailsEntity productDetailsEntity)?
+        getProductDetailsSuccess,
+    TResult? Function(String error)? getProductDetailsError,
+    TResult? Function()? getProductDetailsLoading,
+    TResult? Function()? changeSliderIndex,
+    TResult? Function()? decrement,
+    TResult? Function()? increment,
+    TResult? Function()? selectIndex,
+    TResult? Function()? changeSelectedColorIndex,
+  }) {
+    return changeSelectedColorIndex?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(ProductDetailsEntity productDetailsEntity)?
+        getProductDetailsSuccess,
+    TResult Function(String error)? getProductDetailsError,
+    TResult Function()? getProductDetailsLoading,
+    TResult Function()? changeSliderIndex,
+    TResult Function()? decrement,
+    TResult Function()? increment,
+    TResult Function()? selectIndex,
+    TResult Function()? changeSelectedColorIndex,
+    required TResult orElse(),
+  }) {
+    if (changeSelectedColorIndex != null) {
+      return changeSelectedColorIndex();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetProductDetailsSuccess value)
+        getProductDetailsSuccess,
+    required TResult Function(GetProductDetailsError value)
+        getProductDetailsError,
+    required TResult Function(GetProductDetailsLoading value)
+        getProductDetailsLoading,
+    required TResult Function(ChangeSliderIndex value) changeSliderIndex,
+    required TResult Function(Decrement value) decrement,
+    required TResult Function(Increment value) increment,
+    required TResult Function(SelectIndex value) selectIndex,
+    required TResult Function(ChangeSelectedColorIndex value)
+        changeSelectedColorIndex,
+  }) {
+    return changeSelectedColorIndex(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
+    TResult? Function(GetProductDetailsError value)? getProductDetailsError,
+    TResult? Function(GetProductDetailsLoading value)? getProductDetailsLoading,
+    TResult? Function(ChangeSliderIndex value)? changeSliderIndex,
+    TResult? Function(Decrement value)? decrement,
+    TResult? Function(Increment value)? increment,
+    TResult? Function(SelectIndex value)? selectIndex,
+    TResult? Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
+  }) {
+    return changeSelectedColorIndex?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetProductDetailsSuccess value)? getProductDetailsSuccess,
+    TResult Function(GetProductDetailsError value)? getProductDetailsError,
+    TResult Function(GetProductDetailsLoading value)? getProductDetailsLoading,
+    TResult Function(ChangeSliderIndex value)? changeSliderIndex,
+    TResult Function(Decrement value)? decrement,
+    TResult Function(Increment value)? increment,
+    TResult Function(SelectIndex value)? selectIndex,
+    TResult Function(ChangeSelectedColorIndex value)? changeSelectedColorIndex,
+    required TResult orElse(),
+  }) {
+    if (changeSelectedColorIndex != null) {
+      return changeSelectedColorIndex(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeSelectedColorIndex implements ProductdetilsState {
+  const factory ChangeSelectedColorIndex() = _$ChangeSelectedColorIndexImpl;
 }
